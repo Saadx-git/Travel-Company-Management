@@ -38,6 +38,7 @@ namespace Db_project
             this.lblRating = new System.Windows.Forms.Label();
             this.numRating = new System.Windows.Forms.NumericUpDown();
             this.btnSubmitReview = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numRating)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@ namespace Db_project
             // 
             this.lblTitle.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTitle.Location = new System.Drawing.Point(439, 31);
+            this.lblTitle.Location = new System.Drawing.Point(417, 90);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(317, 40);
             this.lblTitle.TabIndex = 0;
@@ -56,7 +57,7 @@ namespace Db_project
             // 
             this.lblTrip.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrip.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTrip.Location = new System.Drawing.Point(441, 111);
+            this.lblTrip.Location = new System.Drawing.Point(419, 170);
             this.lblTrip.Name = "lblTrip";
             this.lblTrip.Size = new System.Drawing.Size(120, 30);
             this.lblTrip.TabIndex = 1;
@@ -70,7 +71,7 @@ namespace Db_project
             "Trip 1",
             "Trip 2",
             "Trip 3"});
-            this.cmbTrips.Location = new System.Drawing.Point(571, 111);
+            this.cmbTrips.Location = new System.Drawing.Point(549, 170);
             this.cmbTrips.Name = "cmbTrips";
             this.cmbTrips.Size = new System.Drawing.Size(200, 24);
             this.cmbTrips.TabIndex = 2;
@@ -79,7 +80,7 @@ namespace Db_project
             // 
             this.lblComments.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComments.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblComments.Location = new System.Drawing.Point(441, 171);
+            this.lblComments.Location = new System.Drawing.Point(419, 230);
             this.lblComments.Name = "lblComments";
             this.lblComments.Size = new System.Drawing.Size(120, 30);
             this.lblComments.TabIndex = 3;
@@ -88,7 +89,7 @@ namespace Db_project
             // txtComments
             // 
             this.txtComments.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtComments.Location = new System.Drawing.Point(571, 171);
+            this.txtComments.Location = new System.Drawing.Point(549, 230);
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
             this.txtComments.Size = new System.Drawing.Size(400, 120);
@@ -98,7 +99,7 @@ namespace Db_project
             // 
             this.lblRating.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRating.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblRating.Location = new System.Drawing.Point(441, 311);
+            this.lblRating.Location = new System.Drawing.Point(419, 370);
             this.lblRating.Name = "lblRating";
             this.lblRating.Size = new System.Drawing.Size(120, 30);
             this.lblRating.TabIndex = 5;
@@ -107,7 +108,7 @@ namespace Db_project
             // numRating
             // 
             this.numRating.Font = new System.Drawing.Font("Arial", 10F);
-            this.numRating.Location = new System.Drawing.Point(571, 311);
+            this.numRating.Location = new System.Drawing.Point(549, 370);
             this.numRating.Maximum = new decimal(new int[] {
             5,
             0,
@@ -132,7 +133,7 @@ namespace Db_project
             this.btnSubmitReview.BackColor = System.Drawing.Color.Teal;
             this.btnSubmitReview.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSubmitReview.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitReview.Location = new System.Drawing.Point(571, 371);
+            this.btnSubmitReview.Location = new System.Drawing.Point(549, 430);
             this.btnSubmitReview.Name = "btnSubmitReview";
             this.btnSubmitReview.Size = new System.Drawing.Size(150, 40);
             this.btnSubmitReview.TabIndex = 7;
@@ -140,12 +141,27 @@ namespace Db_project
             this.btnSubmitReview.UseVisualStyleBackColor = false;
             this.btnSubmitReview.Click += new System.EventHandler(this.btnSubmitReview_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(37, 648);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(142, 40);
+            this.btnBack.TabIndex = 8;
+            this.btnBack.Text = "← Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
             // ReviewAndRatingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblTrip);
             this.Controls.Add(this.cmbTrips);
@@ -184,5 +200,7 @@ namespace Db_project
             txtComments.Clear();  // Clear the comment box after submission
             numRating.Value = 5;  // Reset rating to 5
         }
+
+        private Button btnBack;
     }
 }

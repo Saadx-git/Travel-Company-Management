@@ -33,6 +33,9 @@ namespace Db_project
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDigitalPass = new System.Windows.Forms.Button();
+            this.btnReviewsRatings = new System.Windows.Forms.Button();
+            this.btnProfileManagement = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrips)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +78,7 @@ namespace Db_project
             this.dgvTrips.Name = "dgvTrips";
             this.dgvTrips.RowHeadersWidth = 51;
             this.dgvTrips.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvTrips.Size = new System.Drawing.Size(952, 153);
+            this.dgvTrips.Size = new System.Drawing.Size(952, 294);
             this.dgvTrips.TabIndex = 1;
             this.dgvTrips.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTrips_CellContentClick);
             // 
@@ -124,12 +127,57 @@ namespace Db_project
             this.dataGridViewTextBoxColumn9.HeaderText = "Category";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
+            // btnDigitalPass
+            // 
+            this.btnDigitalPass.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnDigitalPass.FlatAppearance.BorderSize = 0;
+            this.btnDigitalPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDigitalPass.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnDigitalPass.ForeColor = System.Drawing.Color.White;
+            this.btnDigitalPass.Location = new System.Drawing.Point(223, 490);
+            this.btnDigitalPass.Name = "btnDigitalPass";
+            this.btnDigitalPass.Size = new System.Drawing.Size(220, 50);
+            this.btnDigitalPass.TabIndex = 2;
+            this.btnDigitalPass.Text = "Digital Travel Pass";
+            this.btnDigitalPass.UseVisualStyleBackColor = false;
+            // 
+            // btnReviewsRatings
+            // 
+            this.btnReviewsRatings.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReviewsRatings.FlatAppearance.BorderSize = 0;
+            this.btnReviewsRatings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReviewsRatings.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnReviewsRatings.ForeColor = System.Drawing.Color.White;
+            this.btnReviewsRatings.Location = new System.Drawing.Point(538, 490);
+            this.btnReviewsRatings.Name = "btnReviewsRatings";
+            this.btnReviewsRatings.Size = new System.Drawing.Size(220, 50);
+            this.btnReviewsRatings.TabIndex = 3;
+            this.btnReviewsRatings.Text = "Reviews and Ratings";
+            this.btnReviewsRatings.UseVisualStyleBackColor = false;
+            // 
+            // btnProfileManagement
+            // 
+            this.btnProfileManagement.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnProfileManagement.FlatAppearance.BorderSize = 0;
+            this.btnProfileManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfileManagement.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnProfileManagement.ForeColor = System.Drawing.Color.White;
+            this.btnProfileManagement.Location = new System.Drawing.Point(881, 490);
+            this.btnProfileManagement.Name = "btnProfileManagement";
+            this.btnProfileManagement.Size = new System.Drawing.Size(220, 50);
+            this.btnProfileManagement.TabIndex = 4;
+            this.btnProfileManagement.Text = "Profile Management";
+            this.btnProfileManagement.UseVisualStyleBackColor = false;
+            // 
             // TripDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.btnDigitalPass);
+            this.Controls.Add(this.btnReviewsRatings);
+            this.Controls.Add(this.btnProfileManagement);
             this.Controls.Add(this.lblTripDashboardTitle);
             this.Controls.Add(this.dgvTrips);
             this.Name = "TripDashboard";
@@ -163,5 +211,9 @@ namespace Db_project
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Button btnDigitalPass;
+        private System.Windows.Forms.Button btnReviewsRatings;
+        private System.Windows.Forms.Button btnProfileManagement;
+
     }
 }

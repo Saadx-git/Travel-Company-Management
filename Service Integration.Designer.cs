@@ -26,6 +26,7 @@
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.dgvRequests = new System.Windows.Forms.DataGridView();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,12 +92,27 @@
             this.dgvRequests.Size = new System.Drawing.Size(714, 573);
             this.dgvRequests.TabIndex = 5;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(21, 30);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(142, 40);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.Text = "← Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
             // Service_Integration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnReject);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.lblTitle);
@@ -113,5 +129,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -31,6 +31,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnBook = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,12 +180,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(535, 567);
             this.dataGridView1.TabIndex = 13;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(38, 648);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(142, 40);
+            this.btnBack.TabIndex = 14;
+            this.btnBack.Text = "← Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
             // SearchnBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblSearchBookingTitle);
             this.Controls.Add(this.lblDestination);
@@ -223,5 +239,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

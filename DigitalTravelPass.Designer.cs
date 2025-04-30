@@ -25,6 +25,7 @@ namespace Db_project
             this.btnHotelVouchers = new System.Windows.Forms.Button();
             this.btnActivityPasses = new System.Windows.Forms.Button();
             this.dgvPasses = new System.Windows.Forms.DataGridView();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPasses)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +96,20 @@ namespace Db_project
             this.dgvPasses.Size = new System.Drawing.Size(1180, 450);
             this.dgvPasses.TabIndex = 5;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(50, 655);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(142, 40);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "← Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
             // DigitalTravelPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,6 +121,7 @@ namespace Db_project
             this.Controls.Add(this.btnETickets);
             this.Controls.Add(this.btnHotelVouchers);
             this.Controls.Add(this.btnActivityPasses);
+            this.Controls.Add(this.btnBack);
             this.Name = "DigitalTravelPass";
             this.Text = "Digital Travel Pass";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPasses)).EndInit();
@@ -170,5 +186,7 @@ namespace Db_project
         private System.Windows.Forms.Button btnHotelVouchers;
         private System.Windows.Forms.Button btnActivityPasses;
         private System.Windows.Forms.DataGridView dgvPasses;
+        private System.Windows.Forms.Button btnBack;
+
     }
 }

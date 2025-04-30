@@ -20,8 +20,8 @@ namespace Db_project
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTripDashboardTitle = new System.Windows.Forms.Label();
             this.dgvTrips = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,6 +36,7 @@ namespace Db_project
             this.btnDigitalPass = new System.Windows.Forms.Button();
             this.btnReviewsRatings = new System.Windows.Forms.Button();
             this.btnProfileManagement = new System.Windows.Forms.Button();
+            this.btn_Book_Trip = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrips)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,8 +53,8 @@ namespace Db_project
             // 
             // dgvTrips
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
-            this.dgvTrips.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            this.dgvTrips.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTrips.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvTrips.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTrips.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -66,14 +67,14 @@ namespace Db_project
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTrips.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTrips.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTrips.Location = new System.Drawing.Point(180, 99);
             this.dgvTrips.Name = "dgvTrips";
             this.dgvTrips.RowHeadersWidth = 51;
@@ -129,7 +130,7 @@ namespace Db_project
             // 
             // btnDigitalPass
             // 
-            this.btnDigitalPass.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnDigitalPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDigitalPass.FlatAppearance.BorderSize = 0;
             this.btnDigitalPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDigitalPass.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
@@ -172,12 +173,28 @@ namespace Db_project
             this.btnProfileManagement.UseVisualStyleBackColor = false;
             this.btnProfileManagement.Click += new System.EventHandler(this.btnProfileManagement_Click);
             // 
+            // button1
+            // 
+            this.btn_Book_Trip.BackColor = System.Drawing.Color.Lime;
+            this.btn_Book_Trip.FlatAppearance.BorderSize = 0;
+            this.btn_Book_Trip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Book_Trip.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_Book_Trip.ForeColor = System.Drawing.Color.White;
+            this.btn_Book_Trip.Location = new System.Drawing.Point(538, 618);
+            this.btn_Book_Trip.Name = "Book_Trip";
+            this.btn_Book_Trip.Size = new System.Drawing.Size(220, 50);
+            this.btn_Book_Trip.TabIndex = 5;
+            this.btn_Book_Trip.Text = "Book Trip";
+            this.btn_Book_Trip.UseVisualStyleBackColor = false;
+            this.btn_Book_Trip.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TripDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.btn_Book_Trip);
             this.Controls.Add(this.btnDigitalPass);
             this.Controls.Add(this.btnReviewsRatings);
             this.Controls.Add(this.btnProfileManagement);
@@ -217,6 +234,6 @@ namespace Db_project
         private System.Windows.Forms.Button btnDigitalPass;
         private System.Windows.Forms.Button btnReviewsRatings;
         private System.Windows.Forms.Button btnProfileManagement;
-
+        private Button btn_Book_Trip;
     }
 }

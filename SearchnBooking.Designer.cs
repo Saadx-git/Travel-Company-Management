@@ -32,6 +32,8 @@
             this.btnBook = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lblTripID = new System.Windows.Forms.Label();
+            this.txtTripID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,7 +152,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(212, 433);
+            this.btnSearch.Location = new System.Drawing.Point(199, 409);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(150, 40);
             this.btnSearch.TabIndex = 11;
@@ -164,7 +166,7 @@
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnBook.ForeColor = System.Drawing.Color.White;
-            this.btnBook.Location = new System.Drawing.Point(212, 534);
+            this.btnBook.Location = new System.Drawing.Point(199, 551);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(150, 40);
             this.btnBook.TabIndex = 12;
@@ -175,9 +177,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(644, 102);
+            this.dataGridView1.Location = new System.Drawing.Point(538, 102);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(535, 567);
+            this.dataGridView1.Size = new System.Drawing.Size(641, 567);
             this.dataGridView1.TabIndex = 13;
             // 
             // btnBack
@@ -194,6 +196,24 @@
             this.btnBack.Text = "← Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblTripID
+            // 
+            this.lblTripID.AutoSize = true;
+            this.lblTripID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTripID.Location = new System.Drawing.Point(49, 494);
+            this.lblTripID.Name = "lblTripID";
+            this.lblTripID.Size = new System.Drawing.Size(64, 21);
+            this.lblTripID.TabIndex = 15;
+            this.lblTripID.Text = "Trip ID:";
+            // 
+            // txtTripID
+            // 
+            this.txtTripID.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtTripID.Location = new System.Drawing.Point(199, 494);
+            this.txtTripID.Name = "txtTripID";
+            this.txtTripID.Size = new System.Drawing.Size(300, 25);
+            this.txtTripID.TabIndex = 16;
             // 
             // SearchnBooking
             // 
@@ -216,6 +236,8 @@
             this.Controls.Add(this.txtGroupSize);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnBook);
+            this.Controls.Add(this.lblTripID);
+            this.Controls.Add(this.txtTripID);
             this.Name = "SearchnBooking";
             this.Text = "Search & Booking";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -241,5 +263,8 @@
         private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblTripID;
+        private System.Windows.Forms.TextBox txtTripID;
+
     }
 }

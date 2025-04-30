@@ -42,5 +42,12 @@ namespace Db_project
             Profile_Management profileManagementForm = new Profile_Management();
             profileManagementForm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SearchnBooking searchBookingForm = new SearchnBooking();
+            searchBookingForm.Show();
+        }
     }
 }

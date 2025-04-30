@@ -58,6 +58,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlatformAnalytics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlatformAnalytics.Designer.cs">
+      <DependentUpon>PlatformAnalytics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profile_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlatformAnalytics.resx">
+      <DependentUpon>PlatformAnalytics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile_Management.resx">
       <DependentUpon>Profile_Management.cs</DependentUpon>

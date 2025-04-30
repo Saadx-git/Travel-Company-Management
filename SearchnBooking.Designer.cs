@@ -30,6 +30,8 @@
             this.txtGroupSize = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnBook = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSearchBookingTitle
@@ -48,7 +50,7 @@
             // 
             this.lblDestination.AutoSize = true;
             this.lblDestination.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDestination.Location = new System.Drawing.Point(384, 116);
+            this.lblDestination.Location = new System.Drawing.Point(49, 111);
             this.lblDestination.Name = "lblDestination";
             this.lblDestination.Size = new System.Drawing.Size(103, 21);
             this.lblDestination.TabIndex = 1;
@@ -57,7 +59,7 @@
             // txtDestination
             // 
             this.txtDestination.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDestination.Location = new System.Drawing.Point(534, 116);
+            this.txtDestination.Location = new System.Drawing.Point(199, 111);
             this.txtDestination.Name = "txtDestination";
             this.txtDestination.Size = new System.Drawing.Size(300, 25);
             this.txtDestination.TabIndex = 2;
@@ -66,7 +68,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDate.Location = new System.Drawing.Point(384, 176);
+            this.lblDate.Location = new System.Drawing.Point(49, 171);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(50, 21);
             this.lblDate.TabIndex = 3;
@@ -75,7 +77,7 @@
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dtpDate.Location = new System.Drawing.Point(534, 176);
+            this.dtpDate.Location = new System.Drawing.Point(199, 171);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(300, 25);
             this.dtpDate.TabIndex = 4;
@@ -84,7 +86,7 @@
             // 
             this.lblPriceRange.AutoSize = true;
             this.lblPriceRange.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPriceRange.Location = new System.Drawing.Point(384, 236);
+            this.lblPriceRange.Location = new System.Drawing.Point(49, 231);
             this.lblPriceRange.Name = "lblPriceRange";
             this.lblPriceRange.Size = new System.Drawing.Size(106, 21);
             this.lblPriceRange.TabIndex = 5;
@@ -93,7 +95,7 @@
             // txtPriceRange
             // 
             this.txtPriceRange.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtPriceRange.Location = new System.Drawing.Point(534, 236);
+            this.txtPriceRange.Location = new System.Drawing.Point(199, 231);
             this.txtPriceRange.Name = "txtPriceRange";
             this.txtPriceRange.Size = new System.Drawing.Size(300, 25);
             this.txtPriceRange.TabIndex = 6;
@@ -102,7 +104,7 @@
             // 
             this.lblActivityType.AutoSize = true;
             this.lblActivityType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblActivityType.Location = new System.Drawing.Point(384, 296);
+            this.lblActivityType.Location = new System.Drawing.Point(49, 291);
             this.lblActivityType.Name = "lblActivityType";
             this.lblActivityType.Size = new System.Drawing.Size(113, 21);
             this.lblActivityType.TabIndex = 7;
@@ -117,7 +119,7 @@
             "Beach",
             "Adventure",
             "Sightseeing"});
-            this.cmbActivityType.Location = new System.Drawing.Point(534, 296);
+            this.cmbActivityType.Location = new System.Drawing.Point(199, 291);
             this.cmbActivityType.Name = "cmbActivityType";
             this.cmbActivityType.Size = new System.Drawing.Size(300, 25);
             this.cmbActivityType.TabIndex = 8;
@@ -126,7 +128,7 @@
             // 
             this.lblGroupSize.AutoSize = true;
             this.lblGroupSize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblGroupSize.Location = new System.Drawing.Point(384, 356);
+            this.lblGroupSize.Location = new System.Drawing.Point(49, 351);
             this.lblGroupSize.Name = "lblGroupSize";
             this.lblGroupSize.Size = new System.Drawing.Size(96, 21);
             this.lblGroupSize.TabIndex = 9;
@@ -135,7 +137,7 @@
             // txtGroupSize
             // 
             this.txtGroupSize.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtGroupSize.Location = new System.Drawing.Point(534, 356);
+            this.txtGroupSize.Location = new System.Drawing.Point(199, 351);
             this.txtGroupSize.Name = "txtGroupSize";
             this.txtGroupSize.Size = new System.Drawing.Size(300, 25);
             this.txtGroupSize.TabIndex = 10;
@@ -147,7 +149,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(388, 439);
+            this.btnSearch.Location = new System.Drawing.Point(212, 433);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(150, 40);
             this.btnSearch.TabIndex = 11;
@@ -161,12 +163,21 @@
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnBook.ForeColor = System.Drawing.Color.White;
-            this.btnBook.Location = new System.Drawing.Point(688, 439);
+            this.btnBook.Location = new System.Drawing.Point(212, 534);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(150, 40);
             this.btnBook.TabIndex = 12;
             this.btnBook.Text = "Book Now";
             this.btnBook.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(644, 102);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(535, 567);
+            this.dataGridView1.TabIndex = 13;
             // 
             // SearchnBooking
             // 
@@ -174,6 +185,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblSearchBookingTitle);
             this.Controls.Add(this.lblDestination);
             this.Controls.Add(this.txtDestination);
@@ -189,6 +201,7 @@
             this.Controls.Add(this.btnBook);
             this.Name = "SearchnBooking";
             this.Text = "Search & Booking";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +222,6 @@
         private System.Windows.Forms.TextBox txtGroupSize;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnBook;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

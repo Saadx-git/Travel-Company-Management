@@ -20,8 +20,8 @@ namespace Db_project
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTripDashboardTitle = new System.Windows.Forms.Label();
             this.dgvTrips = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,8 +52,8 @@ namespace Db_project
             // 
             // dgvTrips
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            this.dgvTrips.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
+            this.dgvTrips.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvTrips.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvTrips.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTrips.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -66,14 +66,14 @@ namespace Db_project
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTrips.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTrips.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvTrips.Location = new System.Drawing.Point(180, 99);
             this.dgvTrips.Name = "dgvTrips";
             this.dgvTrips.RowHeadersWidth = 51;
@@ -140,6 +140,7 @@ namespace Db_project
             this.btnDigitalPass.TabIndex = 2;
             this.btnDigitalPass.Text = "Digital Travel Pass";
             this.btnDigitalPass.UseVisualStyleBackColor = false;
+            this.btnDigitalPass.Click += new System.EventHandler(this.btnDigitalPass_Click);
             // 
             // btnReviewsRatings
             // 
@@ -154,6 +155,7 @@ namespace Db_project
             this.btnReviewsRatings.TabIndex = 3;
             this.btnReviewsRatings.Text = "Reviews and Ratings";
             this.btnReviewsRatings.UseVisualStyleBackColor = false;
+            this.btnReviewsRatings.Click += new System.EventHandler(this.btnReviewsRatings_Click);
             // 
             // btnProfileManagement
             // 
@@ -168,6 +170,7 @@ namespace Db_project
             this.btnProfileManagement.TabIndex = 4;
             this.btnProfileManagement.Text = "Profile Management";
             this.btnProfileManagement.UseVisualStyleBackColor = false;
+            this.btnProfileManagement.Click += new System.EventHandler(this.btnProfileManagement_Click);
             // 
             // TripDashboard
             // 

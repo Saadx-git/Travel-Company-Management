@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Db_project
 {
-    public partial class DigitalTravelPass : Form
+    public partial class ReviewModeration : Form
     {
-        public DigitalTravelPass()
+        public ReviewModeration()
         {
             InitializeComponent();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TripDashboard tripDashboardForm = new TripDashboard();
-            tripDashboardForm.Show();
         }
     }
 }

@@ -193,6 +193,7 @@
             this.btnBack.TabIndex = 14;
             this.btnBack.Text = "← Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // SearchnBooking
             // 

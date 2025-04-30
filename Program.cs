@@ -16,7 +16,7 @@ namespace Db_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Profile_Management());
+            Application.Run(new Login());
         }
     }
 }

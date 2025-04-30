@@ -21,5 +21,26 @@ namespace Db_project
         {
 
         }
+
+        private void btnDigitalPass_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DigitalTravelPass digitalTravelPassForm = new DigitalTravelPass();
+            digitalTravelPassForm.Show();
+        }
+
+        private void btnReviewsRatings_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ReviewAndRatingForm reviewAndRatingForm = new ReviewAndRatingForm();
+            reviewAndRatingForm.Show();
+        }
+
+        private void btnProfileManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Profile_Management profileManagementForm = new Profile_Management();
+            profileManagementForm.Show();
+        }
     }
 }

@@ -72,6 +72,12 @@
     <Compile Include="ReviewAndRatingForm .Designer.cs">
       <DependentUpon>ReviewAndRatingForm .cs</DependentUpon>
     </Compile>
+    <Compile Include="ReviewModeration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewModeration.Designer.cs">
+      <DependentUpon>ReviewModeration.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchnBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="ReviewAndRatingForm .resx">
       <DependentUpon>ReviewAndRatingForm .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewModeration.resx">
+      <DependentUpon>ReviewModeration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchnBooking.resx">
       <DependentUpon>SearchnBooking.cs</DependentUpon>

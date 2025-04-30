@@ -16,5 +16,12 @@ namespace Db_project
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+                this.Hide();
+                TripDashboard tripDashboardForm = new TripDashboard();
+                tripDashboardForm.Show(); 
+        }
     }
 }

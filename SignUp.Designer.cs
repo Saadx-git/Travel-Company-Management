@@ -33,7 +33,12 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-
+            this.lblDOB = new System.Windows.Forms.Label();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.lblLanguage = new System.Windows.Forms.Label();
+            this.txtLanguage = new System.Windows.Forms.TextBox();
+            this.lblNationality = new System.Windows.Forms.Label();
+            this.txtNationality = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblSignUpTitle
@@ -193,27 +198,29 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
-
-            // Date of Birth
-            this.lblDOB = new System.Windows.Forms.Label();
-            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblDOB
+            // 
             this.lblDOB.AutoSize = true;
             this.lblDOB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblDOB.ForeColor = System.Drawing.Color.Black;
             this.lblDOB.Location = new System.Drawing.Point(200, 300);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(108, 21);
+            this.lblDOB.Size = new System.Drawing.Size(111, 21);
             this.lblDOB.TabIndex = 17;
             this.lblDOB.Text = "Date of Birth:";
+            // 
+            // dtpDOB
+            // 
             this.dtpDOB.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.dtpDOB.Location = new System.Drawing.Point(350, 300);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(250, 25);
             this.dtpDOB.TabIndex = 18;
-
-            // Language
-            this.lblLanguage = new System.Windows.Forms.Label();
-            this.txtLanguage = new System.Windows.Forms.TextBox();
+            // 
+            // lblLanguage
+            // 
             this.lblLanguage.AutoSize = true;
             this.lblLanguage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblLanguage.ForeColor = System.Drawing.Color.Black;
@@ -222,44 +229,45 @@
             this.lblLanguage.Size = new System.Drawing.Size(89, 21);
             this.lblLanguage.TabIndex = 19;
             this.lblLanguage.Text = "Language:";
+            // 
+            // txtLanguage
+            // 
             this.txtLanguage.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtLanguage.Location = new System.Drawing.Point(850, 300);
             this.txtLanguage.Name = "txtLanguage";
             this.txtLanguage.Size = new System.Drawing.Size(250, 25);
             this.txtLanguage.TabIndex = 20;
-
-            // Nationality
-            this.lblNationality = new System.Windows.Forms.Label();
-            this.txtNationality = new System.Windows.Forms.TextBox();
+            // 
+            // lblNationality
+            // 
             this.lblNationality.AutoSize = true;
             this.lblNationality.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblNationality.ForeColor = System.Drawing.Color.Black;
             this.lblNationality.Location = new System.Drawing.Point(200, 360);
             this.lblNationality.Name = "lblNationality";
-            this.lblNationality.Size = new System.Drawing.Size(93, 21);
+            this.lblNationality.Size = new System.Drawing.Size(101, 21);
             this.lblNationality.TabIndex = 21;
             this.lblNationality.Text = "Nationality:";
+            // 
+            // txtNationality
+            // 
             this.txtNationality.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtNationality.Location = new System.Drawing.Point(350, 360);
             this.txtNationality.Name = "txtNationality";
             this.txtNationality.Size = new System.Drawing.Size(250, 25);
             this.txtNationality.TabIndex = 22;
-
-            // Add to controls
-            this.Controls.Add(this.lblDOB);
-            this.Controls.Add(this.dtpDOB);
-            this.Controls.Add(this.lblLanguage);
-            this.Controls.Add(this.txtLanguage);
-            this.Controls.Add(this.lblNationality);
-            this.Controls.Add(this.txtNationality);
-
-
             // 
             // SignUp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.lblDOB);
+            this.Controls.Add(this.dtpDOB);
+            this.Controls.Add(this.lblLanguage);
+            this.Controls.Add(this.txtLanguage);
+            this.Controls.Add(this.lblNationality);
+            this.Controls.Add(this.txtNationality);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblSignUpTitle);
             this.Controls.Add(this.lblName);

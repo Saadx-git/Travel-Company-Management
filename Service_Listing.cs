@@ -39,9 +39,5 @@ namespace @new
             bookingManagement.Show();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

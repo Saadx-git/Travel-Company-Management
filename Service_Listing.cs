@@ -20,24 +20,25 @@ namespace @new
 
         private void btnServiceConfirmation_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+
             Service_Integration serviceIntegration = new Service_Integration();
             serviceIntegration.Show();
         }
 
         private void btnPerformance_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+
             Form6 performanceReport = new Form6();
             performanceReport.Show();
         }
 
         private void btn_BookingManagement_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             BookingManagement bookingManagement = new BookingManagement();
             bookingManagement.Show();
         }
-
     }
 }

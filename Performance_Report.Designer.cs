@@ -26,7 +26,6 @@ namespace @new
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnView = new System.Windows.Forms.Button();
-            this.btnFeedback = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -116,7 +115,6 @@ namespace @new
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(250)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.btnView);
-            this.panel3.Controls.Add(this.btnFeedback);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(820, 150);
             this.panel3.Name = "panel3";
@@ -129,25 +127,12 @@ namespace @new
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(80, 140);
+            this.btnView.Location = new System.Drawing.Point(85, 98);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(120, 40);
+            this.btnView.Size = new System.Drawing.Size(115, 54);
             this.btnView.TabIndex = 0;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
-            // 
-            // btnFeedback
-            // 
-            this.btnFeedback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnFeedback.ForeColor = System.Drawing.Color.White;
-            this.btnFeedback.Location = new System.Drawing.Point(80, 90);
-            this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(120, 40);
-            this.btnFeedback.TabIndex = 1;
-            this.btnFeedback.Text = "Feedback";
-            this.btnFeedback.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -179,6 +164,7 @@ namespace @new
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
@@ -187,7 +173,6 @@ namespace @new
             this.Controls.Add(this.panel3);
             this.Name = "Form6";
             this.Text = "Provider Performance Report";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form6_Paint);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -204,20 +189,8 @@ namespace @new
         private Label label4;
         private Panel panel3;
         private Button btnView;
-        private Button btnFeedback;
         private Label label6;
 
-        private void Form6_Paint(object sender, PaintEventArgs e)
-        {
-            using (LinearGradientBrush brush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(250, 240, 255),  // lighter top
-                Color.FromArgb(180, 130, 220),  // richer bottom
-                LinearGradientMode.Vertical))
-            {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
-        }
 
         private Button btnBack;
     }

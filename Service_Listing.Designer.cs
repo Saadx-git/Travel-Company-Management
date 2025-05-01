@@ -154,23 +154,10 @@ namespace @new
             this.Controls.Add(this.btnAddListing);
             this.Name = "Service_Listing";
             this.Text = "Service Listing Management";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form3_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void Form3_Paint(object sender, PaintEventArgs e)
-        {
-            using (LinearGradientBrush brush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(0, 100, 0),
-                Color.FromArgb(144, 238, 144),
-                LinearGradientMode.Vertical))
-            {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
         }
         private Button btn_BookingManagement;
         private Button btnServiceConfirmation;

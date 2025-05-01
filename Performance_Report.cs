@@ -24,9 +24,11 @@ namespace @new
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Service_Listing serviceListing = new Service_Listing();
             serviceListing.Show();
         }
+
+        
     }
 }

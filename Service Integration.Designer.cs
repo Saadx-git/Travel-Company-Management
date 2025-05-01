@@ -85,7 +85,7 @@
             // 
             // dgvRequests
             // 
-            this.dgvRequests.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.dgvRequests.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRequests.Location = new System.Drawing.Point(34, 135);
             this.dgvRequests.Name = "dgvRequests";
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCyan;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnReject);

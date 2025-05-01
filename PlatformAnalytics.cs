@@ -14,6 +14,7 @@ namespace Db_project
     {
         public PlatformAnalytics()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 

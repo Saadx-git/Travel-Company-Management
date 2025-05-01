@@ -15,13 +15,13 @@ namespace @new
 {
     public Service_Listing()
     {
-        InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            InitializeComponent();
     }
 
         private void btnServiceConfirmation_Click(object sender, EventArgs e)
         {
             this.Hide();
-
             Service_Integration serviceIntegration = new Service_Integration();
             serviceIntegration.Show();
         }
@@ -29,7 +29,6 @@ namespace @new
         private void btnPerformance_Click(object sender, EventArgs e)
         {
             this.Hide();
-
             Form6 performanceReport = new Form6();
             performanceReport.Show();
         }

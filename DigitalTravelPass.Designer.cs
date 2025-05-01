@@ -93,7 +93,7 @@ namespace Db_project
             this.dgvPasses.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvPasses.Location = new System.Drawing.Point(50, 160);
             this.dgvPasses.Name = "dgvPasses";
-            this.dgvPasses.Size = new System.Drawing.Size(1180, 450);
+            this.dgvPasses.Size = new System.Drawing.Size(1031, 450);
             this.dgvPasses.TabIndex = 5;
             // 
             // btnBack
@@ -129,55 +129,6 @@ namespace Db_project
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        // Button click event for E-Tickets tab
-        private void btnETickets_Click(object sender, EventArgs e)
-        {
-            ShowPasses("E-Tickets");
-        }
-
-        // Button click event for Hotel Vouchers tab
-        private void btnHotelVouchers_Click(object sender, EventArgs e)
-        {
-            ShowPasses("Hotel Vouchers");
-        }
-
-        // Button click event for Activity Passes tab
-        private void btnActivityPasses_Click(object sender, EventArgs e)
-        {
-            ShowPasses("Activity Passes");
-        }
-
-        // Method to display passes based on selected type
-        private void ShowPasses(string passType)
-        {
-            dgvPasses.Columns.Clear();
-            dgvPasses.Rows.Clear();
-
-            // Define columns
-            dgvPasses.Columns.Add("PassID", "Pass ID");
-            dgvPasses.Columns.Add("VoucherID", "Voucher ID");
-            dgvPasses.Columns.Add("IssuedDate", "Issued Date");
-            dgvPasses.Columns.Add("ValidUntil", "Valid Until");
-            dgvPasses.Columns.Add("Details", "Details");
-
-            // Dummy data
-            if (passType == "E-Tickets")
-            {
-                dgvPasses.Rows.Add("ETK12345", "VOUCH123", "2025-04-15", "2025-05-15", "Flight from LA to Paris");
-                dgvPasses.Rows.Add("ETK67890", "VOUCH678", "2025-04-16", "2025-07-16", "Flight from Paris to Tokyo");
-            }
-            else if (passType == "Hotel Vouchers")
-            {
-                dgvPasses.Rows.Add("HV11223", "VOUCH112", "2025-04-20", "2025-08-01", "Hotel booking in Paris");
-                dgvPasses.Rows.Add("HV44556", "VOUCH445", "2025-05-10", "2025-09-10", "Hotel booking in Tokyo");
-            }
-            else if (passType == "Activity Passes")
-            {
-                dgvPasses.Rows.Add("AP11234", "VOUCH123", "2025-05-01", "2025-07-01", "Guided Tour in Paris");
-                dgvPasses.Rows.Add("AP67890", "VOUCH678", "2025-06-20", "2025-08-20", "Safari in Africa");
-            }
         }
 
         #endregion

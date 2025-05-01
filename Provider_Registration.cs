@@ -7,6 +7,7 @@ namespace @new
     {
         public Provider_Registration()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 

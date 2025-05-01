@@ -6,9 +6,6 @@ namespace Db_project
     partial class ReviewAndRatingForm : Form
     {
         private System.ComponentModel.IContainer components = null;
-
-        // UI controls
-        private ComboBox cmbTrips;
         private TextBox txtComments;
         private NumericUpDown numRating;
         private Button btnSubmitReview;
@@ -32,21 +29,24 @@ namespace Db_project
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblTrip = new System.Windows.Forms.Label();
-            this.cmbTrips = new System.Windows.Forms.ComboBox();
             this.lblComments = new System.Windows.Forms.Label();
             this.txtComments = new System.Windows.Forms.TextBox();
             this.lblRating = new System.Windows.Forms.Label();
             this.numRating = new System.Windows.Forms.NumericUpDown();
             this.btnSubmitReview = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.txtTripID = new System.Windows.Forms.TextBox();
+            this.lblPreRev = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numRating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTitle.Location = new System.Drawing.Point(417, 90);
+            this.lblTitle.Location = new System.Drawing.Point(710, 83);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(317, 40);
             this.lblTitle.TabIndex = 0;
@@ -57,30 +57,17 @@ namespace Db_project
             // 
             this.lblTrip.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrip.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTrip.Location = new System.Drawing.Point(419, 170);
+            this.lblTrip.Location = new System.Drawing.Point(712, 163);
             this.lblTrip.Name = "lblTrip";
             this.lblTrip.Size = new System.Drawing.Size(120, 30);
             this.lblTrip.TabIndex = 1;
-            this.lblTrip.Text = "Select Trip:";
-            // 
-            // cmbTrips
-            // 
-            this.cmbTrips.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTrips.Font = new System.Drawing.Font("Arial", 10F);
-            this.cmbTrips.Items.AddRange(new object[] {
-            "Trip 1",
-            "Trip 2",
-            "Trip 3"});
-            this.cmbTrips.Location = new System.Drawing.Point(549, 170);
-            this.cmbTrips.Name = "cmbTrips";
-            this.cmbTrips.Size = new System.Drawing.Size(200, 24);
-            this.cmbTrips.TabIndex = 2;
+            this.lblTrip.Text = "Trip ID:";
             // 
             // lblComments
             // 
             this.lblComments.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComments.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblComments.Location = new System.Drawing.Point(419, 230);
+            this.lblComments.Location = new System.Drawing.Point(712, 223);
             this.lblComments.Name = "lblComments";
             this.lblComments.Size = new System.Drawing.Size(120, 30);
             this.lblComments.TabIndex = 3;
@@ -89,7 +76,7 @@ namespace Db_project
             // txtComments
             // 
             this.txtComments.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtComments.Location = new System.Drawing.Point(549, 230);
+            this.txtComments.Location = new System.Drawing.Point(842, 223);
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
             this.txtComments.Size = new System.Drawing.Size(400, 120);
@@ -99,7 +86,7 @@ namespace Db_project
             // 
             this.lblRating.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRating.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblRating.Location = new System.Drawing.Point(419, 370);
+            this.lblRating.Location = new System.Drawing.Point(712, 363);
             this.lblRating.Name = "lblRating";
             this.lblRating.Size = new System.Drawing.Size(120, 30);
             this.lblRating.TabIndex = 5;
@@ -108,7 +95,7 @@ namespace Db_project
             // numRating
             // 
             this.numRating.Font = new System.Drawing.Font("Arial", 10F);
-            this.numRating.Location = new System.Drawing.Point(549, 370);
+            this.numRating.Location = new System.Drawing.Point(842, 363);
             this.numRating.Maximum = new decimal(new int[] {
             5,
             0,
@@ -133,7 +120,7 @@ namespace Db_project
             this.btnSubmitReview.BackColor = System.Drawing.Color.Teal;
             this.btnSubmitReview.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSubmitReview.ForeColor = System.Drawing.Color.White;
-            this.btnSubmitReview.Location = new System.Drawing.Point(549, 430);
+            this.btnSubmitReview.Location = new System.Drawing.Point(842, 423);
             this.btnSubmitReview.Name = "btnSubmitReview";
             this.btnSubmitReview.Size = new System.Drawing.Size(150, 40);
             this.btnSubmitReview.TabIndex = 7;
@@ -156,16 +143,50 @@ namespace Db_project
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // txtTripID
+            // 
+            this.txtTripID.Font = new System.Drawing.Font("Arial", 10F);
+            this.txtTripID.Location = new System.Drawing.Point(842, 162);
+            this.txtTripID.Multiline = true;
+            this.txtTripID.Name = "txtTripID";
+            this.txtTripID.Size = new System.Drawing.Size(400, 31);
+            this.txtTripID.TabIndex = 9;
+            // 
+            // lblPreRev
+            // 
+            this.lblPreRev.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreRev.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblPreRev.Location = new System.Drawing.Point(32, 39);
+            this.lblPreRev.Name = "lblPreRev";
+            this.lblPreRev.Size = new System.Drawing.Size(317, 40);
+            this.lblPreRev.TabIndex = 10;
+            this.lblPreRev.Text = "Previous Review";
+            this.lblPreRev.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView1.Location = new System.Drawing.Point(37, 92);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(574, 491);
+            this.dataGridView1.TabIndex = 11;
+            // 
             // ReviewAndRatingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblPreRev);
+            this.Controls.Add(this.txtTripID);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblTrip);
-            this.Controls.Add(this.cmbTrips);
             this.Controls.Add(this.lblComments);
             this.Controls.Add(this.txtComments);
             this.Controls.Add(this.lblRating);
@@ -174,6 +195,7 @@ namespace Db_project
             this.Name = "ReviewAndRatingForm";
             this.Text = "Review and Rating Form";
             ((System.ComponentModel.ISupportInitialize)(this.numRating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,27 +203,9 @@ namespace Db_project
 
         #endregion
 
-        // Button click event to submit a review
-        private void btnSubmitReview_Click(object sender, EventArgs e)
-        {
-            string selectedTrip = cmbTrips.SelectedItem.ToString();
-            string comments = txtComments.Text;
-            int rating = (int)numRating.Value;
-
-            if (string.IsNullOrEmpty(comments))
-            {
-                MessageBox.Show("Please enter your comments.");
-                return;
-            }
-
-            // Normally, insert data into the database here.
-            // For this demo, just show a success message and clear fields.
-
-            MessageBox.Show("Review submitted successfully!");
-            txtComments.Clear();  // Clear the comment box after submission
-            numRating.Value = 5;  // Reset rating to 5
-        }
-
         private Button btnBack;
+        private TextBox txtTripID;
+        private Label lblPreRev;
+        private DataGridView dataGridView1;
     }
 }

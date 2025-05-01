@@ -14,7 +14,8 @@ namespace @new
 {
     public BookingManagement()
     {
-        InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            InitializeComponent();
     }
 
     private void Form5_Load(object sender, EventArgs e)

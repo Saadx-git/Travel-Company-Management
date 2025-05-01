@@ -1,4 +1,6 @@
-﻿namespace Db_project
+﻿using System.Windows.Forms;
+
+namespace Db_project
 {
     partial class SearchnBooking
     {
@@ -30,11 +32,11 @@
             this.txtGroupSize = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnBook = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblTripID = new System.Windows.Forms.Label();
             this.txtTripID = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSearchBookingTitle
@@ -158,6 +160,7 @@
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Search Trips";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnBook
             // 
@@ -173,14 +176,15 @@
             this.btnBook.Text = "Book Now";
             this.btnBook.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgv1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(538, 102);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(641, 567);
-            this.dataGridView1.TabIndex = 13;
+            this.dgv1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv1.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Location = new System.Drawing.Point(538, 102);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.Size = new System.Drawing.Size(641, 567);
+            this.dgv1.TabIndex = 13;
             // 
             // btnBack
             // 
@@ -222,7 +226,7 @@
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv1);
             this.Controls.Add(this.lblSearchBookingTitle);
             this.Controls.Add(this.lblDestination);
             this.Controls.Add(this.txtDestination);
@@ -240,7 +244,7 @@
             this.Controls.Add(this.txtTripID);
             this.Name = "SearchnBooking";
             this.Text = "Search & Booking";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +265,7 @@
         private System.Windows.Forms.TextBox txtGroupSize;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnBook;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblTripID;
         private System.Windows.Forms.TextBox txtTripID;

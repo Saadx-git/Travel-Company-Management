@@ -76,9 +76,7 @@
     <Compile Include="Performance_Report.Designer.cs">
       <DependentUpon>Performance_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Login.cs" />
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>

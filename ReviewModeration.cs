@@ -14,6 +14,7 @@ namespace Db_project
     {
         public ReviewModeration()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
     }

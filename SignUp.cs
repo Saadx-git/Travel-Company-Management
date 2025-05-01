@@ -14,6 +14,7 @@ namespace Db_project
     {
         public SignUp()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 

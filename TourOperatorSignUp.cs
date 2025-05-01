@@ -14,6 +14,7 @@ namespace Db_project
     {
         public TourOperatorSignUp()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 

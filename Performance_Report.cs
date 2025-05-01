@@ -14,7 +14,8 @@ namespace @new
 {
     public Form6()
     {
-        InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            InitializeComponent();
     }
 
     private void Form6_Load(object sender, EventArgs e)

@@ -9,7 +9,6 @@ namespace Db_project
         private Label lblTitle;
         private Label lblUserID, lblName, lblGender, lblEmail, lblPassword, lblPhone, lblAddress, lblRegDate, lblUserType;
         private TextBox txtUserID, txtName, txtEmail, txtPassword, txtPhone, txtAddress, txtRegDate, txtUserType;
-        private ComboBox cmbGender;
         private Button btnSaveChanges, btnReset;
 
         private void InitializeComponent()
@@ -20,7 +19,6 @@ namespace Db_project
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblGender = new System.Windows.Forms.Label();
-            this.cmbGender = new System.Windows.Forms.ComboBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -36,6 +34,7 @@ namespace Db_project
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.txtGender = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -92,18 +91,6 @@ namespace Db_project
             this.lblGender.Size = new System.Drawing.Size(150, 30);
             this.lblGender.TabIndex = 5;
             this.lblGender.Text = "Gender:";
-            // 
-            // cmbGender
-            // 
-            this.cmbGender.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
-            this.cmbGender.Location = new System.Drawing.Point(230, 228);
-            this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(300, 29);
-            this.cmbGender.TabIndex = 6;
             // 
             // lblEmail
             // 
@@ -252,10 +239,20 @@ namespace Db_project
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // txtGender
+            // 
+            this.txtGender.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtGender.Location = new System.Drawing.Point(230, 229);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.ReadOnly = true;
+            this.txtGender.Size = new System.Drawing.Size(300, 29);
+            this.txtGender.TabIndex = 22;
+            // 
             // Profile_Management
             // 
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.txtGender);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblUserID);
@@ -263,7 +260,6 @@ namespace Db_project
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblGender);
-            this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblPassword);
@@ -280,37 +276,11 @@ namespace Db_project
             this.Controls.Add(this.btnReset);
             this.Name = "Profile_Management";
             this.Text = "Manage Profile";
-            this.Load += new System.EventHandler(this.Profile_Management_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
-        private void btnSaveChanges_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtName.Text) ||
-                string.IsNullOrWhiteSpace(cmbGender.Text) ||
-                string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                string.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                MessageBox.Show("Please fill in all required fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            // Save changes to database here
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            txtName.Clear();
-            cmbGender.SelectedIndex = -1;
-            txtEmail.Clear();
-            txtPassword.Clear();
-            txtPhone.Clear();
-            txtAddress.Clear();
-        }
-
         private Button btnBack;
+        private TextBox txtGender;
     }
 }

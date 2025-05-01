@@ -15,6 +15,7 @@ namespace Db_project
     {
         public Service_Integration()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 

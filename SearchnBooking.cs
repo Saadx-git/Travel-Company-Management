@@ -31,23 +31,23 @@ namespace Db_project
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
             string destination = txtDestination.Text.Trim();
             string date = dtpDate.Value.Date.ToString("yyyy-MM-dd");
-            string maxBudget = txtPriceRange.Text.Trim();
-            string activity = cmbActivityType.SelectedItem?.ToString();
             string groupSize = txtGroupSize.Text.Trim();
 
-            string query = "SELECT * FROM Trip WHERE 1=1";
+            string query = @"
+        SELECT Trip.Title, Trip.StartDate, Trip.EndDate, Trip.Duration, Trip.GroupSize,
+               Destination.City, Destination.Country, Destination.Region
+        FROM Trip
+        JOIN Trip_Offers_Destination ON Trip.TripID = Trip_Offers_Destination.TripID
+        JOIN Destination ON Trip_Offers_Destination.DestinationID = Destination.DestinationID
+        WHERE 1=1";
+
             if (!string.IsNullOrEmpty(destination))
-                query += " AND Destination LIKE @Destination";
-            if (!string.IsNullOrEmpty(maxBudget))
-                query += " AND Price <= @MaxBudget";
-            if (!string.IsNullOrEmpty(activity))
-                query += " AND ActivityType = @Activity";
+                query += " AND (Destination.City LIKE @Destination OR Destination.Country LIKE @Destination OR Destination.Region LIKE @Destination)";
             if (!string.IsNullOrEmpty(groupSize))
-                query += " AND GroupSize >= @GroupSize";
-            query += " AND TripDate = @Date";
+                query += " AND Trip.GroupSize >= @GroupSize";
+            query += " AND Trip.StartDate >= @Date";
 
             using (SqlConnection con = new SqlConnection(Database_Connection))
             {
@@ -55,10 +55,6 @@ namespace Db_project
                 {
                     if (!string.IsNullOrEmpty(destination))
                         cmd.Parameters.AddWithValue("@Destination", "%" + destination + "%");
-                    if (!string.IsNullOrEmpty(maxBudget))
-                        cmd.Parameters.AddWithValue("@MaxBudget", Convert.ToDecimal(maxBudget));
-                    if (!string.IsNullOrEmpty(activity))
-                        cmd.Parameters.AddWithValue("@Activity", activity);
                     if (!string.IsNullOrEmpty(groupSize))
                         cmd.Parameters.AddWithValue("@GroupSize", Convert.ToInt32(groupSize));
                     cmd.Parameters.AddWithValue("@Date", date);
@@ -72,6 +68,7 @@ namespace Db_project
         }
 
 
+
         private void LoadTrips()
         {
             using (SqlConnection conn = new SqlConnection(Database_Connection))
@@ -79,7 +76,14 @@ namespace Db_project
                 try
                 {
                     conn.Open();
-                    string query = "SELECT * FROM Trip WHERE StartDate > GETDATE()"; // Use WHERE instead of HAVING
+                    string query = @"
+                SELECT Trip.Title, Trip.StartDate, Trip.EndDate, Trip.Duration, Trip.GroupSize,
+                       Destination.City, Destination.Country, Destination.Region
+                FROM Trip
+                JOIN Trip_Offers_Destination ON Trip.TripID = Trip_Offers_Destination.TripID
+                JOIN Destination ON Trip_Offers_Destination.DestinationID = Destination.DestinationID
+                WHERE Trip.StartDate > GETDATE()";
+
                     SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
@@ -91,6 +95,7 @@ namespace Db_project
                 }
             }
         }
+
 
 
     }

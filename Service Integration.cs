@@ -1,4 +1,5 @@
-﻿using System;
+﻿using @new;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Db_project
         public Service_Integration()
         {
             InitializeComponent();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Service_Listing serviceListing = new Service_Listing();
+            serviceListing.Show();
         }
     }
 }

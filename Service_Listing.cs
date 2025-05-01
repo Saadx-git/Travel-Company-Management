@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Db_project;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,30 @@ namespace @new
         InitializeComponent();
     }
 
+        private void btnServiceConfirmation_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Service_Integration serviceIntegration = new Service_Integration();
+            serviceIntegration.Show();
+        }
+
+        private void btnPerformance_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form6 performanceReport = new Form6();
+            performanceReport.Show();
+        }
+
+        private void btn_BookingManagement_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            BookingManagement bookingManagement = new BookingManagement();
+            bookingManagement.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

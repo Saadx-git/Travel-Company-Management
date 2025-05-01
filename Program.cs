@@ -16,7 +16,7 @@ namespace @new
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Provider_Registration());
+            Application.Run(new Service_Listing());
         }
     }
 }

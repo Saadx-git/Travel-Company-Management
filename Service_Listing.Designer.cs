@@ -30,7 +30,9 @@ namespace @new
             this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEdit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnAddListing = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btn_BookingManagement = new System.Windows.Forms.Button();
+            this.btnServiceConfirmation = new System.Windows.Forms.Button();
+            this.btnPerformance = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,10 +55,10 @@ namespace @new
             this.colServiceName,
             this.colLocation,
             this.colEdit});
-            this.dataGridView1.GridColor = System.Drawing.Color.DarkGreen;
+            this.dataGridView1.GridColor = System.Drawing.Color.AliceBlue;
             this.dataGridView1.Location = new System.Drawing.Point(100, 100);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1080, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(1080, 288);
             this.dataGridView1.TabIndex = 1;
             // 
             // colServiceName
@@ -86,38 +88,71 @@ namespace @new
             this.btnAddListing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddListing.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddListing.ForeColor = System.Drawing.Color.White;
-            this.btnAddListing.Location = new System.Drawing.Point(100, 530);
+            this.btnAddListing.Location = new System.Drawing.Point(100, 418);
             this.btnAddListing.Name = "btnAddListing";
             this.btnAddListing.Size = new System.Drawing.Size(160, 40);
             this.btnAddListing.TabIndex = 2;
             this.btnAddListing.Text = "+ Add Listing";
             this.btnAddListing.UseVisualStyleBackColor = false;
             // 
-            // btnBack
+            // btn_BookingManagement
             // 
-            this.btnBack.BackColor = System.Drawing.Color.Red;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(36, 650);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(160, 40);
-            this.btnBack.TabIndex = 22;
-            this.btnBack.Text = "← Back";
-            this.btnBack.UseVisualStyleBackColor = false;
+            this.btn_BookingManagement.BackColor = System.Drawing.Color.Lime;
+            this.btn_BookingManagement.FlatAppearance.BorderSize = 0;
+            this.btn_BookingManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BookingManagement.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_BookingManagement.ForeColor = System.Drawing.Color.White;
+            this.btn_BookingManagement.Location = new System.Drawing.Point(839, 512);
+            this.btn_BookingManagement.Name = "btn_BookingManagement";
+            this.btn_BookingManagement.Size = new System.Drawing.Size(220, 50);
+            this.btn_BookingManagement.TabIndex = 26;
+            this.btn_BookingManagement.Text = "Booking Management";
+            this.btn_BookingManagement.UseVisualStyleBackColor = false;
+            this.btn_BookingManagement.Click += new System.EventHandler(this.btn_BookingManagement_Click);
             // 
-            // Form3
+            // btnServiceConfirmation
+            // 
+            this.btnServiceConfirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnServiceConfirmation.FlatAppearance.BorderSize = 0;
+            this.btnServiceConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServiceConfirmation.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnServiceConfirmation.ForeColor = System.Drawing.Color.White;
+            this.btnServiceConfirmation.Location = new System.Drawing.Point(186, 512);
+            this.btnServiceConfirmation.Name = "btnServiceConfirmation";
+            this.btnServiceConfirmation.Size = new System.Drawing.Size(220, 50);
+            this.btnServiceConfirmation.TabIndex = 23;
+            this.btnServiceConfirmation.Text = "Service Confirmation";
+            this.btnServiceConfirmation.UseVisualStyleBackColor = false;
+            this.btnServiceConfirmation.Click += new System.EventHandler(this.btnServiceConfirmation_Click);
+            // 
+            // btnPerformance
+            // 
+            this.btnPerformance.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPerformance.FlatAppearance.BorderSize = 0;
+            this.btnPerformance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerformance.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnPerformance.ForeColor = System.Drawing.Color.White;
+            this.btnPerformance.Location = new System.Drawing.Point(501, 512);
+            this.btnPerformance.Name = "btnPerformance";
+            this.btnPerformance.Size = new System.Drawing.Size(220, 50);
+            this.btnPerformance.TabIndex = 24;
+            this.btnPerformance.Text = "Performance";
+            this.btnPerformance.UseVisualStyleBackColor = false;
+            this.btnPerformance.Click += new System.EventHandler(this.btnPerformance_Click);
+            // 
+            // Service_Listing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btn_BookingManagement);
+            this.Controls.Add(this.btnServiceConfirmation);
+            this.Controls.Add(this.btnPerformance);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAddListing);
-            this.Name = "Form3";
+            this.Name = "Service_Listing";
             this.Text = "Service Listing Management";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form3_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -137,7 +172,8 @@ namespace @new
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
         }
-
-        private Button btnBack;
+        private Button btn_BookingManagement;
+        private Button btnServiceConfirmation;
+        private Button btnPerformance;
     }
 }

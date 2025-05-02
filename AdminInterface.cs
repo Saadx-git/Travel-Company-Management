@@ -42,5 +42,17 @@ namespace Db_project
             ReviewModeration reviewModeration = new ReviewModeration();
             reviewModeration.Show();
         }
+
+        private void AdminInterface_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prfile_mng_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Profile_Management profileManagement = new Profile_Management();
+            profileManagement.Show();
+        }
     }
 }

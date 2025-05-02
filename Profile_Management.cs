@@ -1,4 +1,5 @@
-﻿using System;
+﻿using @new;
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -66,6 +67,18 @@ namespace Db_project
                 this.Hide();
                 CreateTrip createTripForm = new CreateTrip();
                 createTripForm.Show();
+            }
+            else if (Globals.UserType == "Service Provider")
+            {
+                this.Hide();
+                Service_Listing ServiceListing = new Service_Listing();
+                ServiceListing.Show();
+            }
+            else if (Globals.UserType == "Admin")
+            {
+                this.Hide();
+                AdminInterface adminInterface = new AdminInterface();
+                adminInterface.Show();
             }
         }
 

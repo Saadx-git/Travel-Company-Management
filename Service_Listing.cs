@@ -39,5 +39,12 @@ namespace @new
             BookingManagement bookingManagement = new BookingManagement();
             bookingManagement.Show();
         }
+
+        private void btnProfileManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Profile_Management profileManagement = new Profile_Management();
+            profileManagement.Show();
+        }
     }
 }

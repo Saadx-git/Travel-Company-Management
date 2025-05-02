@@ -33,6 +33,7 @@ namespace @new
             this.btn_BookingManagement = new System.Windows.Forms.Button();
             this.btnServiceConfirmation = new System.Windows.Forms.Button();
             this.btnPerformance = new System.Windows.Forms.Button();
+            this.btnProfileManagement = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,12 +141,28 @@ namespace @new
             this.btnPerformance.UseVisualStyleBackColor = false;
             this.btnPerformance.Click += new System.EventHandler(this.btnPerformance_Click);
             // 
+            // btnProfileManagement
+            // 
+            this.btnProfileManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnProfileManagement.FlatAppearance.BorderSize = 0;
+            this.btnProfileManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfileManagement.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnProfileManagement.ForeColor = System.Drawing.Color.White;
+            this.btnProfileManagement.Location = new System.Drawing.Point(501, 614);
+            this.btnProfileManagement.Name = "btnProfileManagement";
+            this.btnProfileManagement.Size = new System.Drawing.Size(220, 50);
+            this.btnProfileManagement.TabIndex = 27;
+            this.btnProfileManagement.Text = "Profile Management";
+            this.btnProfileManagement.UseVisualStyleBackColor = false;
+            this.btnProfileManagement.Click += new System.EventHandler(this.btnProfileManagement_Click);
+            // 
             // Service_Listing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.btnProfileManagement);
             this.Controls.Add(this.btn_BookingManagement);
             this.Controls.Add(this.btnServiceConfirmation);
             this.Controls.Add(this.btnPerformance);
@@ -162,5 +179,6 @@ namespace @new
         private Button btn_BookingManagement;
         private Button btnServiceConfirmation;
         private Button btnPerformance;
+        private Button btnProfileManagement;
     }
 }

@@ -1,11 +1,10 @@
-﻿using Db_project;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace @new
+namespace DB_Project_1
 {
     internal static class Program
     {
@@ -17,7 +16,7 @@ namespace @new
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new CreateTrip());
         }
     }
 }

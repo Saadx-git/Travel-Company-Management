@@ -78,10 +78,11 @@ namespace Db_project
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(50, 653);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(142, 40);
+            this.btnBack.Size = new System.Drawing.Size(183, 40);
             this.btnBack.TabIndex = 15;
             this.btnBack.Text = "← Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblReviewID
             // 

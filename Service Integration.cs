@@ -25,5 +25,31 @@ namespace Db_project
             Service_Listing serviceListing = new Service_Listing();
             serviceListing.Show();
         }
+
+        private void btnListing_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Service_Listing serviceListing = new Service_Listing();
+            serviceListing.Show();
+        }
+
+        private void BookinMangement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BookingManagement bookingManagementForm = new BookingManagement();
+            bookingManagementForm.Show();
+        }
+
+        private void btnperformance_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form6 performanceManagement = new Form6();
+            performanceManagement.Show();
+        }
+
+        private void Service_Integration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

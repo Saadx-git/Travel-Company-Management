@@ -52,12 +52,6 @@
     <Compile Include="AdminInterface.Designer.cs">
       <DependentUpon>AdminInterface.cs</DependentUpon>
     </Compile>
-    <Compile Include="BookingManagementForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BookingManagementForm.Designer.cs">
-      <DependentUpon>BookingManagementForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreateTrip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,8 +178,8 @@
     <Compile Include="UpdateTrip.Designer.cs">
       <DependentUpon>UpdateTrip.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BookingManagementForm.resx">
-      <DependentUpon>BookingManagementForm.cs</DependentUpon>
+    <EmbeddedResource Include="AdminInterface.resx">
+      <DependentUpon>AdminInterface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateTrip.resx">
       <DependentUpon>CreateTrip.cs</DependentUpon>

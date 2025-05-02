@@ -20,7 +20,10 @@ namespace Db_project
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            AdminInterface adminInterface = new AdminInterface();
+            adminInterface.Show();
+
         }
     }
 }

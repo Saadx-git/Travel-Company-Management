@@ -30,6 +30,9 @@ namespace @new
             serviceListing.Show();
         }
 
-        
+        private void Form6_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

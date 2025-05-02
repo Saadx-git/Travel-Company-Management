@@ -173,6 +173,7 @@ namespace @new
             this.Controls.Add(this.panel3);
             this.Name = "Form6";
             this.Text = "Provider Performance Report";
+            this.Load += new System.EventHandler(this.Form6_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

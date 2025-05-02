@@ -16,5 +16,31 @@ namespace Db_project
         {
             InitializeComponent();
         }
+
+        private void lblTripID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tour_Categories_Management tourCategoriesManagement = new Tour_Categories_Management();
+            tourCategoriesManagement.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PlatformAnalytics platformAnalytics = new PlatformAnalytics();
+            platformAnalytics.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ReviewModeration reviewModeration = new ReviewModeration();
+            reviewModeration.Show();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using @new;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -69,17 +70,20 @@ namespace Db_project
                         {
                             this.Hide();
                             TripDashboard tripDashboardForm = new TripDashboard();
-                            // Pass userId if needed: tripDashboardForm.SetUserID(userId);
                             tripDashboardForm.Show();
                         }
                         else if (userType == "Admin")
                         {
-
+                            this.Hide();
+                            AdminInterface adminInterface = new AdminInterface();
+                            adminInterface.Show();
 
                         }
                         else if (userType == "Service Provider")
                         {
-
+                            this.Hide();
+                            Service_Listing serviceIntegration = new Service_Listing();
+                            serviceIntegration.Show();
 
                         }
                         else if (userType == "Tour Operator")

@@ -40,6 +40,9 @@ namespace @new
             this.txtBookingID = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +88,7 @@ namespace @new
             this.dataGridView1.Location = new System.Drawing.Point(100, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1054, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(1054, 219);
             this.dataGridView1.TabIndex = 1;
             // 
             // colBookingID
@@ -117,7 +120,7 @@ namespace @new
             this.lblBookingID.AutoSize = true;
             this.lblBookingID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookingID.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblBookingID.Location = new System.Drawing.Point(344, 535);
+            this.lblBookingID.Location = new System.Drawing.Point(102, 341);
             this.lblBookingID.Name = "lblBookingID";
             this.lblBookingID.Size = new System.Drawing.Size(229, 21);
             this.lblBookingID.TabIndex = 2;
@@ -128,7 +131,7 @@ namespace @new
             this.txtBookingID.BackColor = System.Drawing.Color.White;
             this.txtBookingID.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtBookingID.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.txtBookingID.Location = new System.Drawing.Point(594, 530);
+            this.txtBookingID.Location = new System.Drawing.Point(352, 336);
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.Size = new System.Drawing.Size(220, 29);
             this.txtBookingID.TabIndex = 3;
@@ -140,7 +143,7 @@ namespace @new
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(481, 613);
+            this.btnConfirm.Location = new System.Drawing.Point(352, 406);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(220, 35);
             this.btnConfirm.TabIndex = 4;
@@ -163,10 +166,58 @@ namespace @new
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(352, 495);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(220, 41);
+            this.button3.TabIndex = 26;
+            this.button3.Text = "Cancel Booking";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(602, 495);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(220, 41);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Process Refund";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(100, 495);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(220, 41);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Send Reminder";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // BookingManagement
             // 
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.dataGridView1);
@@ -203,5 +254,8 @@ namespace @new
         }
 
         private Button btnBack;
+        private Button button3;
+        private Button button1;
+        private Button button2;
     }
 }

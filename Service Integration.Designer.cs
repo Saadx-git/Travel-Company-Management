@@ -43,7 +43,7 @@
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblId.Location = new System.Drawing.Point(852, 212);
+            this.lblId.Location = new System.Drawing.Point(784, 137);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(31, 21);
             this.lblId.TabIndex = 3;
@@ -52,7 +52,7 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtId.Location = new System.Drawing.Point(950, 212);
+            this.txtId.Location = new System.Drawing.Point(882, 137);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(200, 27);
             this.txtId.TabIndex = 4;
@@ -88,7 +88,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1049, 315);
+            this.button1.Location = new System.Drawing.Point(986, 199);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 45);
             this.button1.TabIndex = 8;
@@ -102,7 +102,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(849, 315);
+            this.button2.Location = new System.Drawing.Point(786, 199);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 45);
             this.button2.TabIndex = 7;
@@ -125,6 +125,7 @@
             this.Name = "Service_Integration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Service Assignment";
+            this.Load += new System.EventHandler(this.Service_Integration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequests)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

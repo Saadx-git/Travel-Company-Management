@@ -17,5 +17,12 @@ namespace Db_project
             this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminInterface adminInterface = new AdminInterface();
+            adminInterface.Show();
+        }
     }
 }

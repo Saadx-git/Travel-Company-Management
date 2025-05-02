@@ -30,6 +30,7 @@
             this.btnAddCategory = new System.Windows.Forms.Button();
             this.btnEditCategory = new System.Windows.Forms.Button();
             this.btnDeleteCategory = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCategories)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,20 +38,21 @@
             // 
             this.labelTourCategories.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTourCategories.ForeColor = System.Drawing.Color.Teal;
-            this.labelTourCategories.Location = new System.Drawing.Point(245, 24);
+            this.labelTourCategories.Location = new System.Drawing.Point(448, 29);
             this.labelTourCategories.Name = "labelTourCategories";
-            this.labelTourCategories.Size = new System.Drawing.Size(350, 30);
+            this.labelTourCategories.Size = new System.Drawing.Size(345, 35);
             this.labelTourCategories.TabIndex = 5;
             this.labelTourCategories.Text = "🌍 Tour Categories Management ✈️";
             this.labelTourCategories.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvTourCategories
             // 
+            this.dgvTourCategories.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvTourCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTourCategories.Location = new System.Drawing.Point(65, 64);
+            this.dgvTourCategories.Location = new System.Drawing.Point(65, 85);
             this.dgvTourCategories.Name = "dgvTourCategories";
             this.dgvTourCategories.RowHeadersWidth = 57;
-            this.dgvTourCategories.Size = new System.Drawing.Size(720, 150);
+            this.dgvTourCategories.Size = new System.Drawing.Size(1146, 249);
             this.dgvTourCategories.TabIndex = 6;
             // 
             // btnAddCategory
@@ -59,7 +61,7 @@
             this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCategory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddCategory.ForeColor = System.Drawing.Color.White;
-            this.btnAddCategory.Location = new System.Drawing.Point(65, 224);
+            this.btnAddCategory.Location = new System.Drawing.Point(65, 352);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(150, 40);
             this.btnAddCategory.TabIndex = 7;
@@ -72,7 +74,7 @@
             this.btnEditCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditCategory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditCategory.ForeColor = System.Drawing.Color.White;
-            this.btnEditCategory.Location = new System.Drawing.Point(245, 224);
+            this.btnEditCategory.Location = new System.Drawing.Point(245, 352);
             this.btnEditCategory.Name = "btnEditCategory";
             this.btnEditCategory.Size = new System.Drawing.Size(150, 40);
             this.btnEditCategory.TabIndex = 8;
@@ -85,17 +87,33 @@
             this.btnDeleteCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteCategory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnDeleteCategory.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteCategory.Location = new System.Drawing.Point(425, 224);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(425, 352);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
             this.btnDeleteCategory.Size = new System.Drawing.Size(150, 40);
             this.btnDeleteCategory.TabIndex = 9;
             this.btnDeleteCategory.Text = "🗑️ Delete Category";
             this.btnDeleteCategory.UseVisualStyleBackColor = false;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(65, 616);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(142, 40);
+            this.btnBack.TabIndex = 15;
+            this.btnBack.Text = "← Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Tour_Categories_Management
             // 
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(845, 453);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.labelTourCategories);
             this.Controls.Add(this.dgvTourCategories);
             this.Controls.Add(this.btnAddCategory);
@@ -117,5 +135,6 @@
         private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.Button btnEditCategory;
         private System.Windows.Forms.Button btnDeleteCategory;
+        private System.Windows.Forms.Button btnBack;
     }
     }

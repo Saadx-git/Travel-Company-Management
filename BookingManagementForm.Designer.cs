@@ -1,4 +1,4 @@
-﻿namespace DB_Project_1
+﻿namespace Db_project
 {
     partial class BookingManagementForm
     {

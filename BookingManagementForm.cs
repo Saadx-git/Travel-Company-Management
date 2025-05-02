@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DB_Project_1
+namespace Db_project
 {
     public partial class BookingManagementForm : Form
     {

@@ -46,11 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInterface.Designer.cs">
+      <DependentUpon>AdminInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingManagementForm.Designer.cs">
+      <DependentUpon>BookingManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTrip.Designer.cs">
+      <DependentUpon>CreateTrip.cs</DependentUpon>
+    </Compile>
     <Compile Include="DigitalTravelPass.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DigitalTravelPass.Designer.cs">
       <DependentUpon>DigitalTravelPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotelAssignment.Designer.cs">
+      <DependentUpon>HotelAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTrip.Designer.cs">
+      <DependentUpon>ManageTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceAnalyticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceAnalyticsForm.Designer.cs">
+      <DependentUpon>PerformanceAnalyticsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Provider_Registration.cs">
       <SubType>Form</SubType>
@@ -130,14 +166,41 @@
     <Compile Include="TourOperatorSignUp.Designer.cs">
       <DependentUpon>TourOperatorSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tour_Categories_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tour_Categories_Management.Designer.cs">
+      <DependentUpon>Tour_Categories_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="TripDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TripDashboard.Designer.cs">
       <DependentUpon>TripDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTrip.Designer.cs">
+      <DependentUpon>UpdateTrip.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BookingManagementForm.resx">
+      <DependentUpon>BookingManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTrip.resx">
+      <DependentUpon>CreateTrip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DigitalTravelPass.resx">
       <DependentUpon>DigitalTravelPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelAssignment.resx">
+      <DependentUpon>HotelAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTrip.resx">
+      <DependentUpon>ManageTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceAnalyticsForm.resx">
+      <DependentUpon>PerformanceAnalyticsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Provider_Registration.resx">
       <DependentUpon>Provider_Registration.cs</DependentUpon>
@@ -187,8 +250,14 @@
     <EmbeddedResource Include="TourOperatorSignUp.resx">
       <DependentUpon>TourOperatorSignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tour_Categories_Management.resx">
+      <DependentUpon>Tour_Categories_Management.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TripDashboard.resx">
       <DependentUpon>TripDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTrip.resx">
+      <DependentUpon>UpdateTrip.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

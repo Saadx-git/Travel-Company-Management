@@ -43,9 +43,9 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblTitle.Location = new System.Drawing.Point(500, 30);
+            this.lblTitle.Location = new System.Drawing.Point(366, 23);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(384, 47);
+            this.lblTitle.Size = new System.Drawing.Size(536, 66);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Tour Operator SignUp";
             // 
@@ -56,16 +56,16 @@
             this.lblCompanyName.ForeColor = System.Drawing.Color.Black;
             this.lblCompanyName.Location = new System.Drawing.Point(721, 135);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(137, 21);
+            this.lblCompanyName.Size = new System.Drawing.Size(190, 31);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = "Company Name:";
             // 
             // txtCompanyName
             // 
             this.txtCompanyName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtCompanyName.Location = new System.Drawing.Point(872, 135);
+            this.txtCompanyName.Location = new System.Drawing.Point(927, 136);
             this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(250, 25);
+            this.txtCompanyName.Size = new System.Drawing.Size(250, 32);
             this.txtCompanyName.TabIndex = 2;
             // 
             // lblCompanyAddress
@@ -75,16 +75,16 @@
             this.lblCompanyAddress.ForeColor = System.Drawing.Color.Black;
             this.lblCompanyAddress.Location = new System.Drawing.Point(709, 205);
             this.lblCompanyAddress.Name = "lblCompanyAddress";
-            this.lblCompanyAddress.Size = new System.Drawing.Size(151, 21);
+            this.lblCompanyAddress.Size = new System.Drawing.Size(212, 31);
             this.lblCompanyAddress.TabIndex = 3;
             this.lblCompanyAddress.Text = "Company Address:";
             // 
             // txtCompanyAddress
             // 
             this.txtCompanyAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtCompanyAddress.Location = new System.Drawing.Point(872, 205);
+            this.txtCompanyAddress.Location = new System.Drawing.Point(927, 206);
             this.txtCompanyAddress.Name = "txtCompanyAddress";
-            this.txtCompanyAddress.Size = new System.Drawing.Size(250, 25);
+            this.txtCompanyAddress.Size = new System.Drawing.Size(250, 32);
             this.txtCompanyAddress.TabIndex = 4;
             // 
             // lblLicenseNumber
@@ -94,7 +94,7 @@
             this.lblLicenseNumber.ForeColor = System.Drawing.Color.Black;
             this.lblLicenseNumber.Location = new System.Drawing.Point(721, 279);
             this.lblLicenseNumber.Name = "lblLicenseNumber";
-            this.lblLicenseNumber.Size = new System.Drawing.Size(138, 21);
+            this.lblLicenseNumber.Size = new System.Drawing.Size(193, 31);
             this.lblLicenseNumber.TabIndex = 5;
             this.lblLicenseNumber.Text = "License Number:";
             this.lblLicenseNumber.Click += new System.EventHandler(this.lblLicenseNumber_Click);
@@ -102,9 +102,9 @@
             // txtLicenseNumber
             // 
             this.txtLicenseNumber.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtLicenseNumber.Location = new System.Drawing.Point(872, 279);
+            this.txtLicenseNumber.Location = new System.Drawing.Point(927, 280);
             this.txtLicenseNumber.Name = "txtLicenseNumber";
-            this.txtLicenseNumber.Size = new System.Drawing.Size(250, 25);
+            this.txtLicenseNumber.Size = new System.Drawing.Size(250, 32);
             this.txtLicenseNumber.TabIndex = 6;
             // 
             // btnSignUp
@@ -142,7 +142,7 @@
             this.lblGender.ForeColor = System.Drawing.Color.Black;
             this.lblGender.Location = new System.Drawing.Point(172, 197);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(70, 21);
+            this.lblGender.Size = new System.Drawing.Size(98, 31);
             this.lblGender.TabIndex = 15;
             this.lblGender.Text = "Gender:";
             // 
@@ -155,7 +155,7 @@
             "Other"});
             this.cmbGender.Location = new System.Drawing.Point(322, 197);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(250, 25);
+            this.cmbGender.Size = new System.Drawing.Size(250, 33);
             this.cmbGender.TabIndex = 16;
             // 
             // lblEmail
@@ -165,7 +165,7 @@
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(172, 257);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(57, 21);
+            this.lblEmail.Size = new System.Drawing.Size(79, 31);
             this.lblEmail.TabIndex = 17;
             this.lblEmail.Text = "Email:";
             // 
@@ -174,7 +174,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtEmail.Location = new System.Drawing.Point(322, 257);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(250, 25);
+            this.txtEmail.Size = new System.Drawing.Size(250, 32);
             this.txtEmail.TabIndex = 18;
             // 
             // lblPassword
@@ -184,7 +184,7 @@
             this.lblPassword.ForeColor = System.Drawing.Color.Black;
             this.lblPassword.Location = new System.Drawing.Point(172, 319);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(86, 21);
+            this.lblPassword.Size = new System.Drawing.Size(120, 31);
             this.lblPassword.TabIndex = 19;
             this.lblPassword.Text = "Password:";
             // 
@@ -193,7 +193,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtPassword.Location = new System.Drawing.Point(322, 319);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(250, 25);
+            this.txtPassword.Size = new System.Drawing.Size(250, 32);
             this.txtPassword.TabIndex = 20;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -204,7 +204,7 @@
             this.lblPhone.ForeColor = System.Drawing.Color.Black;
             this.lblPhone.Location = new System.Drawing.Point(172, 379);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(63, 21);
+            this.lblPhone.Size = new System.Drawing.Size(88, 31);
             this.lblPhone.TabIndex = 21;
             this.lblPhone.Text = "Phone:";
             // 
@@ -213,7 +213,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtPhone.Location = new System.Drawing.Point(322, 379);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(250, 25);
+            this.txtPhone.Size = new System.Drawing.Size(250, 32);
             this.txtPhone.TabIndex = 22;
             // 
             // txtName
@@ -221,7 +221,7 @@
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtName.Location = new System.Drawing.Point(323, 137);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(250, 25);
+            this.txtName.Size = new System.Drawing.Size(250, 32);
             this.txtName.TabIndex = 14;
             // 
             // lblName
@@ -231,7 +231,7 @@
             this.lblName.ForeColor = System.Drawing.Color.Black;
             this.lblName.Location = new System.Drawing.Point(173, 137);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(60, 21);
+            this.lblName.Size = new System.Drawing.Size(83, 31);
             this.lblName.TabIndex = 13;
             this.lblName.Text = "Name:";
             // 
@@ -239,7 +239,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1260, 668);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblGender);

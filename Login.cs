@@ -84,7 +84,9 @@ namespace Db_project
                         }
                         else if (userType == "Tour Operator")
                         {
-
+                            this.Hide();
+                            CreateTrip createTrip = new CreateTrip();
+                            createTrip.Show();
 
                         }
                         else

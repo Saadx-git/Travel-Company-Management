@@ -56,9 +56,17 @@ namespace Db_project
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            TripDashboard tripDashboardForm = new TripDashboard();
-            tripDashboardForm.Show();
+            if (Globals.UserType == "Traveller")
+            {
+                this.Hide();
+                TripDashboard tripDashboardForm = new TripDashboard();
+                tripDashboardForm.Show();
+            }
+            else if (Globals.UserType == "Tour Operator"){
+                this.Hide();
+                CreateTrip createTripForm = new CreateTrip();
+                createTripForm.Show();
+            }
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)

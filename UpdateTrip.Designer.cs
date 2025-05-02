@@ -42,17 +42,20 @@
             this.durationbox = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
             this.titlebox = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ravie", 11.8209F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(484, 24);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label1.Location = new System.Drawing.Point(583, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 32);
+            this.label1.Size = new System.Drawing.Size(178, 40);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Updating";
+            this.label1.Text = "Update Trip";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button2
@@ -62,10 +65,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(427, 519);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(562, 471);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(265, 62);
+            this.button2.Size = new System.Drawing.Size(199, 50);
             this.button2.TabIndex = 16;
             this.button2.Text = "Update Trip";
             this.button2.UseVisualStyleBackColor = false;
@@ -73,12 +76,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(600, 398);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label3.Location = new System.Drawing.Point(679, 369);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 25);
+            this.label3.Size = new System.Drawing.Size(82, 21);
             this.label3.TabIndex = 18;
             this.label3.Text = "Audience";
             // 
@@ -87,21 +89,20 @@
             this.audience.BackColor = System.Drawing.Color.White;
             this.audience.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.audience.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.audience.Location = new System.Drawing.Point(742, 398);
-            this.audience.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.audience.Location = new System.Drawing.Point(785, 369);
+            this.audience.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.audience.Name = "audience";
-            this.audience.Size = new System.Drawing.Size(224, 30);
+            this.audience.Size = new System.Drawing.Size(168, 23);
             this.audience.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(105, 398);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label2.Location = new System.Drawing.Point(308, 369);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 25);
+            this.label2.Size = new System.Drawing.Size(92, 21);
             this.label2.TabIndex = 20;
             this.label2.Text = "Group Size";
             // 
@@ -110,61 +111,58 @@
             this.groupsize.BackColor = System.Drawing.Color.White;
             this.groupsize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.groupsize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.groupsize.Location = new System.Drawing.Point(242, 395);
-            this.groupsize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupsize.Location = new System.Drawing.Point(411, 367);
+            this.groupsize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupsize.Name = "groupsize";
-            this.groupsize.Size = new System.Drawing.Size(224, 30);
+            this.groupsize.Size = new System.Drawing.Size(168, 23);
             this.groupsize.TabIndex = 21;
             // 
             // end
             // 
             this.end.AutoSize = true;
-            this.end.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.end.ForeColor = System.Drawing.Color.White;
-            this.end.Location = new System.Drawing.Point(600, 255);
-            this.end.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.end.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.end.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.end.Location = new System.Drawing.Point(679, 253);
             this.end.Name = "end";
-            this.end.Size = new System.Drawing.Size(92, 25);
+            this.end.Size = new System.Drawing.Size(79, 21);
             this.end.TabIndex = 22;
             this.end.Text = "End Date";
             // 
             // start
             // 
             this.start.AutoSize = true;
-            this.start.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.start.ForeColor = System.Drawing.Color.White;
-            this.start.Location = new System.Drawing.Point(105, 255);
-            this.start.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.start.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.start.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.start.Location = new System.Drawing.Point(308, 253);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(102, 25);
+            this.start.Size = new System.Drawing.Size(86, 21);
             this.start.TabIndex = 23;
             this.start.Text = "Start Date";
             // 
             // enddate
             // 
-            this.enddate.Location = new System.Drawing.Point(742, 251);
-            this.enddate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.enddate.Location = new System.Drawing.Point(785, 250);
+            this.enddate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.enddate.Name = "enddate";
-            this.enddate.Size = new System.Drawing.Size(249, 22);
+            this.enddate.Size = new System.Drawing.Size(188, 20);
             this.enddate.TabIndex = 24;
             // 
             // startdate
             // 
-            this.startdate.Location = new System.Drawing.Point(242, 251);
-            this.startdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.startdate.Location = new System.Drawing.Point(411, 250);
+            this.startdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.startdate.Name = "startdate";
-            this.startdate.Size = new System.Drawing.Size(249, 22);
+            this.startdate.Size = new System.Drawing.Size(188, 20);
             this.startdate.TabIndex = 25;
             // 
             // duration
             // 
             this.duration.AutoSize = true;
-            this.duration.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.duration.ForeColor = System.Drawing.Color.White;
-            this.duration.Location = new System.Drawing.Point(600, 122);
-            this.duration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.duration.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duration.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.duration.Location = new System.Drawing.Point(679, 145);
             this.duration.Name = "duration";
-            this.duration.Size = new System.Drawing.Size(92, 25);
+            this.duration.Size = new System.Drawing.Size(78, 21);
             this.duration.TabIndex = 26;
             this.duration.Text = "Duration";
             // 
@@ -173,21 +171,20 @@
             this.durationbox.BackColor = System.Drawing.Color.White;
             this.durationbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.durationbox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.durationbox.Location = new System.Drawing.Point(742, 122);
-            this.durationbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.durationbox.Location = new System.Drawing.Point(785, 145);
+            this.durationbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.durationbox.Name = "durationbox";
-            this.durationbox.Size = new System.Drawing.Size(224, 30);
+            this.durationbox.Size = new System.Drawing.Size(168, 23);
             this.durationbox.TabIndex = 27;
             // 
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.title.ForeColor = System.Drawing.Color.White;
-            this.title.Location = new System.Drawing.Point(114, 122);
-            this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.title.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.title.Location = new System.Drawing.Point(315, 145);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(50, 25);
+            this.title.Size = new System.Drawing.Size(44, 21);
             this.title.TabIndex = 28;
             this.title.Text = "Title";
             // 
@@ -196,18 +193,34 @@
             this.titlebox.BackColor = System.Drawing.Color.White;
             this.titlebox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.titlebox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.titlebox.Location = new System.Drawing.Point(242, 122);
-            this.titlebox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.titlebox.Location = new System.Drawing.Point(411, 145);
+            this.titlebox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.titlebox.Name = "titlebox";
-            this.titlebox.Size = new System.Drawing.Size(224, 30);
+            this.titlebox.Size = new System.Drawing.Size(168, 23);
             this.titlebox.TabIndex = 29;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(44, 606);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(160, 40);
+            this.btnBack.TabIndex = 30;
+            this.btnBack.Text = "← Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // UpdateTrip
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1097, 691);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.audience);
@@ -222,6 +235,7 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.titlebox);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UpdateTrip";
             this.Text = "Update";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -245,5 +259,6 @@
         private System.Windows.Forms.TextBox durationbox;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.TextBox titlebox;
+        private System.Windows.Forms.Button btnBack;
     }
 }

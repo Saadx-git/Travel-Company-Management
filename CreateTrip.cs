@@ -14,6 +14,7 @@ namespace Db_project
     {
         public CreateTrip()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 
@@ -39,6 +40,13 @@ namespace Db_project
             HotelAssignment hotel=new HotelAssignment();
             hotel.Show();
             this.Hide();
+        }
+
+        private void btnProfileManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Profile_Management profileManagement = new Profile_Management();
+            profileManagement.Show();
         }
     }
 }

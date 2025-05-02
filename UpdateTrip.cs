@@ -26,5 +26,13 @@ namespace Db_project
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreateTrip login = new CreateTrip();
+            login.Show();
+
+        }
     }
 }

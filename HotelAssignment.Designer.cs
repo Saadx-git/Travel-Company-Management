@@ -15,130 +15,140 @@
         private void InitializeComponent()
         {
             this.labelTitle = new System.Windows.Forms.Label();
-            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.buttonAssign = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.labelBookingID = new System.Windows.Forms.Label();
             this.bookingid = new System.Windows.Forms.TextBox();
             this.labelHotel = new System.Windows.Forms.Label();
             this.textBoxHotelName = new System.Windows.Forms.TextBox();
             this.labelDate = new System.Windows.Forms.Label();
             this.assignmentdate = new System.Windows.Forms.DateTimePicker();
-            this.buttonAssign = new System.Windows.Forms.Button();
-            this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitle
             // 
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelTitle.Location = new System.Drawing.Point(180, 20);
+            this.labelTitle.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelTitle.Location = new System.Drawing.Point(450, 52);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(350, 40);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "🏨 Hotel Assignment";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox
-            // 
-            this.groupBox.Controls.Add(this.labelBookingID);
-            this.groupBox.Controls.Add(this.bookingid);
-            this.groupBox.Controls.Add(this.labelHotel);
-            this.groupBox.Controls.Add(this.textBoxHotelName);
-            this.groupBox.Controls.Add(this.labelDate);
-            this.groupBox.Controls.Add(this.assignmentdate);
-            this.groupBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular);
-            this.groupBox.Location = new System.Drawing.Point(100, 80);
-            this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(500, 230);
-            this.groupBox.TabIndex = 1;
-            this.groupBox.TabStop = false;
-            this.groupBox.Text = "Hotel Assignment Details";
-            // 
-            // labelBookingID
-            // 
-            this.labelBookingID.AutoSize = true;
-            this.labelBookingID.Location = new System.Drawing.Point(30, 40);
-            this.labelBookingID.Name = "labelBookingID";
-            this.labelBookingID.Size = new System.Drawing.Size(95, 23);
-            this.labelBookingID.TabIndex = 0;
-            this.labelBookingID.Text = "📄 Booking ID:";
-            // 
-            // bookingid
-            // 
-            this.bookingid.Location = new System.Drawing.Point(200, 40);
-            this.bookingid.Name = "bookingid";
-            this.bookingid.Size = new System.Drawing.Size(200, 30);
-            this.bookingid.TabIndex = 1;
-            // 
-            // labelHotel
-            // 
-            this.labelHotel.AutoSize = true;
-            this.labelHotel.Location = new System.Drawing.Point(30, 95);
-            this.labelHotel.Name = "labelHotel";
-            this.labelHotel.Size = new System.Drawing.Size(109, 23);
-            this.labelHotel.TabIndex = 2;
-            this.labelHotel.Text = "🏨 Hotel Name:";
-            // 
-            // textBoxHotelName
-            // 
-            this.textBoxHotelName.Location = new System.Drawing.Point(200, 95);
-            this.textBoxHotelName.Name = "textBoxHotelName";
-            this.textBoxHotelName.Size = new System.Drawing.Size(200, 30);
-            this.textBoxHotelName.TabIndex = 3;
-            // 
-            // labelDate
-            // 
-            this.labelDate.AutoSize = true;
-            this.labelDate.Location = new System.Drawing.Point(30, 150);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(147, 23);
-            this.labelDate.TabIndex = 4;
-            this.labelDate.Text = "🗓 Assignment Date:";
-            // 
-            // assignmentdate
-            // 
-            this.assignmentdate.Location = new System.Drawing.Point(200, 150);
-            this.assignmentdate.Name = "assignmentdate";
-            this.assignmentdate.Size = new System.Drawing.Size(250, 30);
-            this.assignmentdate.TabIndex = 5;
-            // 
             // buttonAssign
             // 
-            this.buttonAssign.BackColor = System.Drawing.Color.Teal;
+            this.buttonAssign.BackColor = System.Drawing.Color.Indigo;
             this.buttonAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAssign.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.buttonAssign.ForeColor = System.Drawing.Color.White;
-            this.buttonAssign.Location = new System.Drawing.Point(270, 330);
+            this.buttonAssign.Location = new System.Drawing.Point(546, 349);
             this.buttonAssign.Name = "buttonAssign";
-            this.buttonAssign.Size = new System.Drawing.Size(150, 40);
+            this.buttonAssign.Size = new System.Drawing.Size(166, 45);
             this.buttonAssign.TabIndex = 6;
             this.buttonAssign.Text = "Assign Hotel";
             this.buttonAssign.UseVisualStyleBackColor = false;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(31, 611);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(160, 40);
+            this.btnBack.TabIndex = 25;
+            this.btnBack.Text = "← Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // labelBookingID
+            // 
+            this.labelBookingID.AutoSize = true;
+            this.labelBookingID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBookingID.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelBookingID.Location = new System.Drawing.Point(416, 174);
+            this.labelBookingID.Name = "labelBookingID";
+            this.labelBookingID.Size = new System.Drawing.Size(123, 21);
+            this.labelBookingID.TabIndex = 26;
+            this.labelBookingID.Text = "📄 Booking ID:";
+            // 
+            // bookingid
+            // 
+            this.bookingid.Location = new System.Drawing.Point(608, 174);
+            this.bookingid.Name = "bookingid";
+            this.bookingid.Size = new System.Drawing.Size(200, 20);
+            this.bookingid.TabIndex = 27;
+            // 
+            // labelHotel
+            // 
+            this.labelHotel.AutoSize = true;
+            this.labelHotel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHotel.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelHotel.Location = new System.Drawing.Point(416, 229);
+            this.labelHotel.Name = "labelHotel";
+            this.labelHotel.Size = new System.Drawing.Size(133, 21);
+            this.labelHotel.TabIndex = 28;
+            this.labelHotel.Text = "🏨 Hotel Name:";
+            // 
+            // textBoxHotelName
+            // 
+            this.textBoxHotelName.Location = new System.Drawing.Point(608, 229);
+            this.textBoxHotelName.Name = "textBoxHotelName";
+            this.textBoxHotelName.Size = new System.Drawing.Size(200, 20);
+            this.textBoxHotelName.TabIndex = 29;
+            // 
+            // labelDate
+            // 
+            this.labelDate.AutoSize = true;
+            this.labelDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.labelDate.Location = new System.Drawing.Point(416, 284);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(169, 21);
+            this.labelDate.TabIndex = 30;
+            this.labelDate.Text = "🗓 Assignment Date:";
+            // 
+            // assignmentdate
+            // 
+            this.assignmentdate.Location = new System.Drawing.Point(608, 284);
+            this.assignmentdate.Name = "assignmentdate";
+            this.assignmentdate.Size = new System.Drawing.Size(250, 20);
+            this.assignmentdate.TabIndex = 31;
+            // 
             // HotelAssignment
             // 
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(700, 400);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.labelBookingID);
+            this.Controls.Add(this.bookingid);
+            this.Controls.Add(this.labelHotel);
+            this.Controls.Add(this.textBoxHotelName);
+            this.Controls.Add(this.labelDate);
+            this.Controls.Add(this.assignmentdate);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.buttonAssign);
-            this.Controls.Add(this.groupBox);
             this.Controls.Add(this.labelTitle);
             this.Name = "HotelAssignment";
             this.Text = "Hotel Assignment";
-       //     this.Load += new System.EventHandler(this.HotelAssignment_Load);
-            this.groupBox.ResumeLayout(false);
-            this.groupBox.PerformLayout();
+            this.Load += new System.EventHandler(this.HotelAssignment_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.GroupBox groupBox;
+        private System.Windows.Forms.Button buttonAssign;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label labelBookingID;
         private System.Windows.Forms.TextBox bookingid;
         private System.Windows.Forms.Label labelHotel;
         private System.Windows.Forms.TextBox textBoxHotelName;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.DateTimePicker assignmentdate;
-        private System.Windows.Forms.Button buttonAssign;
     }
 }

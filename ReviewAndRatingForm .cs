@@ -19,7 +19,6 @@ namespace Db_project
             InitializeComponent();
             load_reviews();
         }
-        String Database_Connection = "Data Source=DESKTOP-PIBRB9H\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True;Encrypt=False";
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -41,7 +40,7 @@ namespace Db_project
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection(Database_Connection))
+            using (SqlConnection conn = new SqlConnection(Globals.connectionString))
             {
                 try
                 {
@@ -74,7 +73,7 @@ namespace Db_project
         private void load_reviews()
         {
             int userId = Globals.LoggedInUserID; 
-            using (SqlConnection conn = new SqlConnection(Database_Connection))
+            using (SqlConnection conn = new SqlConnection(Globals.connectionString))
             {
                 string query = @"    
                          SELECT T.Title AS TripName, R.Comments, R.Rating

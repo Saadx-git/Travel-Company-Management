@@ -13,7 +13,6 @@ namespace Db_project
 {
     public partial class SearchnBooking : Form
     {
-        string Database_Connection = "Data Source=DESKTOP-PIBRB9H\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True;Encrypt=False";
         public SearchnBooking()
         {
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -49,7 +48,7 @@ namespace Db_project
                 query += " AND Trip.GroupSize >= @GroupSize";
             query += " AND Trip.StartDate >= @Date";
 
-            using (SqlConnection con = new SqlConnection(Database_Connection))
+            using (SqlConnection con = new SqlConnection(Globals.connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -71,7 +70,7 @@ namespace Db_project
 
         private void LoadTrips()
         {
-            using (SqlConnection conn = new SqlConnection(Database_Connection))
+            using (SqlConnection conn = new SqlConnection(Globals.connectionString))
             {
                 try
                 {

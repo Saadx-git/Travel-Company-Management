@@ -64,6 +64,7 @@
     <Compile Include="DigitalTravelPass.Designer.cs">
       <DependentUpon>DigitalTravelPass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="HotelAssignment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +107,9 @@
     <Compile Include="Performance_Report.Designer.cs">
       <DependentUpon>Performance_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
@@ -153,6 +156,12 @@
     </Compile>
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpAs.Designer.cs">
+      <DependentUpon>SignUpAs.cs</DependentUpon>
     </Compile>
     <Compile Include="TourOperatorSignUp.cs">
       <SubType>Form</SubType>
@@ -240,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpAs.resx">
+      <DependentUpon>SignUpAs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TourOperatorSignUp.resx">
       <DependentUpon>TourOperatorSignUp.cs</DependentUpon>

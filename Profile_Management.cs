@@ -14,13 +14,12 @@ namespace Db_project
             LoadUserProfile(); // Call explicitly here only if not using Form.Load event
         }
 
-        string connectionString = "Data Source=DESKTOP-PIBRB9H\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True;Encrypt=False";
-
+        
         private void LoadUserProfile()
         {
             string query = "SELECT * FROM Users WHERE UserID = @ID";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Globals.connectionString))
             {
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@ID", Globals.LoggedInUserID); // Fixed parameter casing
@@ -94,7 +93,7 @@ namespace Db_project
             Address = @Address
         WHERE UserID = @UserID";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Globals.connectionString))
             {
                 SqlCommand cmd = new SqlCommand(query, conn);
 

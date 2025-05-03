@@ -28,13 +28,16 @@
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.btnApprove = new System.Windows.Forms.Button();
             this.btnReject = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.lblUSrID = new System.Windows.Forms.Label();
-            this.txtTripID = new System.Windows.Forms.TextBox();
+            this.txtUserID = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.prfile_mng = new System.Windows.Forms.Button();
+            this.showtravellers = new System.Windows.Forms.Button();
+            this.showoperators = new System.Windows.Forms.Button();
+            this.showproviders = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,9 +56,9 @@
             // 
             this.dgvUsers.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(32, 95);
+            this.dgvUsers.Location = new System.Drawing.Point(12, 95);
             this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.Size = new System.Drawing.Size(720, 557);
+            this.dgvUsers.Size = new System.Drawing.Size(551, 557);
             this.dgvUsers.TabIndex = 6;
             // 
             // btnApprove
@@ -64,12 +67,13 @@
             this.btnApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApprove.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnApprove.ForeColor = System.Drawing.Color.White;
-            this.btnApprove.Location = new System.Drawing.Point(791, 198);
+            this.btnApprove.Location = new System.Drawing.Point(857, 198);
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.Size = new System.Drawing.Size(150, 40);
             this.btnApprove.TabIndex = 7;
             this.btnApprove.Text = "Approve";
             this.btnApprove.UseVisualStyleBackColor = false;
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
             // btnReject
             // 
@@ -77,45 +81,33 @@
             this.btnReject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReject.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnReject.ForeColor = System.Drawing.Color.White;
-            this.btnReject.Location = new System.Drawing.Point(1000, 198);
+            this.btnReject.Location = new System.Drawing.Point(1056, 198);
             this.btnReject.Name = "btnReject";
             this.btnReject.Size = new System.Drawing.Size(150, 40);
             this.btnReject.TabIndex = 8;
             this.btnReject.Text = "Reject";
             this.btnReject.UseVisualStyleBackColor = false;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(791, 278);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(150, 40);
-            this.btnRefresh.TabIndex = 9;
-            this.btnRefresh.Text = "Refresh List";
-            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnReject.Click += new System.EventHandler(this.btnReject_Click);
             // 
             // lblUSrID
             // 
             this.lblUSrID.AutoSize = true;
             this.lblUSrID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblUSrID.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblUSrID.Location = new System.Drawing.Point(797, 121);
+            this.lblUSrID.Location = new System.Drawing.Point(853, 117);
             this.lblUSrID.Name = "lblUSrID";
             this.lblUSrID.Size = new System.Drawing.Size(69, 21);
             this.lblUSrID.TabIndex = 17;
             this.lblUSrID.Text = "User ID:";
             this.lblUSrID.Click += new System.EventHandler(this.lblTripID_Click);
             // 
-            // txtTripID
+            // txtUserID
             // 
-            this.txtTripID.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTripID.Location = new System.Drawing.Point(942, 117);
-            this.txtTripID.Name = "txtTripID";
-            this.txtTripID.Size = new System.Drawing.Size(208, 25);
-            this.txtTripID.TabIndex = 18;
+            this.txtUserID.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtUserID.Location = new System.Drawing.Point(998, 113);
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Size = new System.Drawing.Size(208, 25);
+            this.txtUserID.TabIndex = 18;
             // 
             // button1
             // 
@@ -181,21 +173,83 @@
             this.prfile_mng.UseVisualStyleBackColor = false;
             this.prfile_mng.Click += new System.EventHandler(this.prfile_mng_Click);
             // 
+            // showtravellers
+            // 
+            this.showtravellers.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.showtravellers.FlatAppearance.BorderSize = 0;
+            this.showtravellers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showtravellers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.showtravellers.ForeColor = System.Drawing.Color.White;
+            this.showtravellers.Location = new System.Drawing.Point(597, 472);
+            this.showtravellers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.showtravellers.Name = "showtravellers";
+            this.showtravellers.Size = new System.Drawing.Size(155, 47);
+            this.showtravellers.TabIndex = 23;
+            this.showtravellers.Text = "Travellers";
+            this.showtravellers.UseVisualStyleBackColor = false;
+            this.showtravellers.Click += new System.EventHandler(this.showtravellers_Click);
+            // 
+            // showoperators
+            // 
+            this.showoperators.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.showoperators.FlatAppearance.BorderSize = 0;
+            this.showoperators.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showoperators.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.showoperators.ForeColor = System.Drawing.Color.White;
+            this.showoperators.Location = new System.Drawing.Point(597, 537);
+            this.showoperators.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.showoperators.Name = "showoperators";
+            this.showoperators.Size = new System.Drawing.Size(155, 47);
+            this.showoperators.TabIndex = 24;
+            this.showoperators.Text = "Operators";
+            this.showoperators.UseVisualStyleBackColor = false;
+            this.showoperators.Click += new System.EventHandler(this.showoperators_Click);
+            // 
+            // showproviders
+            // 
+            this.showproviders.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.showproviders.FlatAppearance.BorderSize = 0;
+            this.showproviders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showproviders.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.showproviders.ForeColor = System.Drawing.Color.White;
+            this.showproviders.Location = new System.Drawing.Point(597, 603);
+            this.showproviders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.showproviders.Name = "showproviders";
+            this.showproviders.Size = new System.Drawing.Size(155, 47);
+            this.showproviders.TabIndex = 25;
+            this.showproviders.Text = "Service Provider";
+            this.showproviders.UseVisualStyleBackColor = false;
+            this.showproviders.Click += new System.EventHandler(this.showproviders_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label1.Location = new System.Drawing.Point(596, 426);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 21);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Show Registrations";
+            // 
             // AdminInterface
             // 
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.showproviders);
+            this.Controls.Add(this.showoperators);
+            this.Controls.Add(this.showtravellers);
             this.Controls.Add(this.prfile_mng);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblUSrID);
-            this.Controls.Add(this.txtTripID);
+            this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.btnApprove);
             this.Controls.Add(this.btnReject);
-            this.Controls.Add(this.btnRefresh);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AdminInterface";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -213,12 +267,15 @@
         private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.Button btnReject;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label lblUSrID;
-        private System.Windows.Forms.TextBox txtTripID;
+        private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button prfile_mng;
+        private System.Windows.Forms.Button showtravellers;
+        private System.Windows.Forms.Button showoperators;
+        private System.Windows.Forms.Button showproviders;
+        private System.Windows.Forms.Label label1;
     }
 }

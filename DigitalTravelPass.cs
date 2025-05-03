@@ -14,8 +14,7 @@ namespace Db_project
 {
     public partial class DigitalTravelPass : Form
     {
-        string Database_Connection = "Data Source=DESKTOP-PIBRB9H\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True;Encrypt=False";
-
+        
         public DigitalTravelPass()
         {
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -32,7 +31,7 @@ namespace Db_project
 
         private void LoadDigitalPasses()
         {
-            using (SqlConnection conn = new SqlConnection(Database_Connection))
+            using (SqlConnection conn = new SqlConnection(Globals.connectionString))
             {
                 try
                 { 
@@ -59,7 +58,7 @@ namespace Db_project
         }
         private void LoadDigitalPassesByType(string passType)
         {
-            using (SqlConnection conn = new SqlConnection(Database_Connection))
+            using (SqlConnection conn = new SqlConnection(Globals.connectionString))
             {
                 try
                 {

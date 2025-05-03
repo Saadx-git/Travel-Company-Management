@@ -10,19 +10,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-public static class Globals
-{
-    public static int LoggedInUserID = -1;
-    public static string UserType = "";
-}
+//public static class Globals
+//{
+//    public static int LoggedInUserID = -1;
+//    public static string UserType = "";
+//    public static string connectionString = "Data Source=DESKTOP-PIBRB9H\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True;Encrypt=False";
+
+//}
 
 
 namespace Db_project
 {
     public partial class Login : Form
     {
-        String Database_Connection = "Data Source=DESKTOP-PIBRB9H\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True;Encrypt=False";
-
+        
         public Login()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace Db_project
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SignUp signUpForm = new SignUp();
+            SignUpAs signUpForm = new SignUpAs();
             signUpForm.Show();
         }
 
@@ -46,7 +47,7 @@ namespace Db_project
             return;
         }
 
-        using (SqlConnection conn = new SqlConnection(Database_Connection))
+        using (SqlConnection conn = new SqlConnection(Globals.connectionString))
         {
             try
             {
@@ -66,7 +67,7 @@ namespace Db_project
                         Globals.LoggedInUserID = userId;
                         Globals.UserType = userType;
 
-                        if (userType == "Traveller")
+                        if (userType == "Traveller" && reader["ApprovedBy"] != DBNull.Value)
                         {
                             this.Hide();
                             TripDashboard tripDashboardForm = new TripDashboard();
@@ -79,14 +80,14 @@ namespace Db_project
                             adminInterface.Show();
 
                         }
-                        else if (userType == "Service Provider")
+                        else if (userType == "Service Provider" && reader["ManagedBy"] != DBNull.Value)
                         {
                             this.Hide();
                             Service_Listing serviceIntegration = new Service_Listing();
                             serviceIntegration.Show();
 
                         }
-                        else if (userType == "Tour Operator")
+                        else if (userType == "Tour Operator" && reader["ManagedBy"] != DBNull.Value)
                         {
                             this.Hide();
                             CreateTrip createTrip = new CreateTrip();

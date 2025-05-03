@@ -68,6 +68,7 @@ namespace Db_project
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete Review";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnBack
             // 

@@ -1,4 +1,6 @@
-﻿namespace Db_project
+﻿using System.Windows.Forms;
+
+namespace Db_project
 {
     partial class Tour_Categories_Management
     {
@@ -31,6 +33,12 @@
             this.btnEditCategory = new System.Windows.Forms.Button();
             this.btnDeleteCategory = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCategories)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +55,7 @@
             // 
             // dgvTourCategories
             // 
+            this.dgvTourCategories.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTourCategories.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvTourCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTourCategories.Location = new System.Drawing.Point(65, 85);
@@ -61,12 +70,13 @@
             this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCategory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddCategory.ForeColor = System.Drawing.Color.White;
-            this.btnAddCategory.Location = new System.Drawing.Point(65, 352);
+            this.btnAddCategory.Location = new System.Drawing.Point(936, 430);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(150, 40);
             this.btnAddCategory.TabIndex = 7;
             this.btnAddCategory.Text = "➕ Add Category";
             this.btnAddCategory.UseVisualStyleBackColor = false;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // btnEditCategory
             // 
@@ -74,12 +84,13 @@
             this.btnEditCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditCategory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditCategory.ForeColor = System.Drawing.Color.White;
-            this.btnEditCategory.Location = new System.Drawing.Point(245, 352);
+            this.btnEditCategory.Location = new System.Drawing.Point(936, 507);
             this.btnEditCategory.Name = "btnEditCategory";
             this.btnEditCategory.Size = new System.Drawing.Size(150, 40);
             this.btnEditCategory.TabIndex = 8;
             this.btnEditCategory.Text = "✏️ Edit Category";
             this.btnEditCategory.UseVisualStyleBackColor = false;
+            this.btnEditCategory.Click += new System.EventHandler(this.btnEditCategory_Click);
             // 
             // btnDeleteCategory
             // 
@@ -87,12 +98,13 @@
             this.btnDeleteCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteCategory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnDeleteCategory.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteCategory.Location = new System.Drawing.Point(425, 352);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(936, 582);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
             this.btnDeleteCategory.Size = new System.Drawing.Size(150, 40);
             this.btnDeleteCategory.TabIndex = 9;
             this.btnDeleteCategory.Text = "🗑️ Delete Category";
             this.btnDeleteCategory.UseVisualStyleBackColor = false;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
             // 
             // btnBack
             // 
@@ -109,10 +121,71 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblName.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblName.Location = new System.Drawing.Point(452, 478);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(60, 21);
+            this.lblName.TabIndex = 16;
+            this.lblName.Text = "Name:";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblID.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblID.Location = new System.Drawing.Point(449, 422);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(105, 21);
+            this.lblID.TabIndex = 17;
+            this.lblID.Text = "Category ID:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblEmail.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblEmail.Location = new System.Drawing.Point(452, 542);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(102, 21);
+            this.lblEmail.TabIndex = 18;
+            this.lblEmail.Text = "Description:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(573, 422);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(321, 20);
+            this.textBox1.TabIndex = 19;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(560, 542);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(334, 96);
+            this.richTextBox1.TabIndex = 20;
+            this.richTextBox1.Text = "";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(573, 478);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(321, 20);
+            this.textBox2.TabIndex = 21;
+            // 
             // Tour_Categories_Management
             // 
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.labelTourCategories);
             this.Controls.Add(this.dgvTourCategories);
@@ -125,6 +198,7 @@
             this.Text = "Admin Interface - TravelEase";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTourCategories)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
             }
 
@@ -136,5 +210,11 @@
         private System.Windows.Forms.Button btnEditCategory;
         private System.Windows.Forms.Button btnDeleteCategory;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
     }

@@ -33,7 +33,6 @@ namespace Db_project
         private void InitializeComponent()
         {
             this.lblHeader = new System.Windows.Forms.Label();
-            this.metricsPanel = new System.Windows.Forms.Panel();
             this.lblUserTraffic = new System.Windows.Forms.Label();
             this.txtUserTraffic = new System.Windows.Forms.TextBox();
             this.lblBookingTrends = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@ namespace Db_project
             this.txtRevenue = new System.Windows.Forms.TextBox();
             this.btnRefreshAnalytics = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.metricsPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -54,15 +54,6 @@ namespace Db_project
             this.lblHeader.Size = new System.Drawing.Size(469, 45);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Platform Analytics Dashboard";
-            // 
-            // metricsPanel
-            // 
-            this.metricsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.metricsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metricsPanel.Location = new System.Drawing.Point(59, 334);
-            this.metricsPanel.Name = "metricsPanel";
-            this.metricsPanel.Size = new System.Drawing.Size(1161, 202);
-            this.metricsPanel.TabIndex = 1;
             // 
             // lblUserTraffic
             // 
@@ -91,7 +82,7 @@ namespace Db_project
             this.lblBookingTrends.Name = "lblBookingTrends";
             this.lblBookingTrends.Size = new System.Drawing.Size(250, 30);
             this.lblBookingTrends.TabIndex = 2;
-            this.lblBookingTrends.Text = "📈  Booking Trends:";
+            this.lblBookingTrends.Text = "📈  Total Bookings:";
             // 
             // txtBookingTrends
             // 
@@ -137,6 +128,7 @@ namespace Db_project
             this.btnRefreshAnalytics.TabIndex = 2;
             this.btnRefreshAnalytics.Text = "↻ Refresh Analytics";
             this.btnRefreshAnalytics.UseVisualStyleBackColor = false;
+            this.btnRefreshAnalytics.Click += new System.EventHandler(this.btnRefreshAnalytics_Click);
             // 
             // btnBack
             // 
@@ -152,6 +144,15 @@ namespace Db_project
             this.btnBack.Text = "← Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // metricsPanel
+            // 
+            this.metricsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.metricsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metricsPanel.Location = new System.Drawing.Point(59, 334);
+            this.metricsPanel.Name = "metricsPanel";
+            this.metricsPanel.Size = new System.Drawing.Size(1161, 202);
+            this.metricsPanel.TabIndex = 1;
             // 
             // PlatformAnalytics
             // 
@@ -189,8 +190,7 @@ namespace Db_project
         private System.Windows.Forms.Button btnRefreshAnalytics;
 
         #endregion
-
-        private Panel metricsPanel;
         private Button btnBack;
+        private Panel metricsPanel;
     }
 }

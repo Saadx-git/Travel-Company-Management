@@ -167,12 +167,12 @@ namespace Db_project
                 {
                     conn.Open();
 
-                    string query = "UPDATE Traveller SET ManagedBy = @ManagedByValue WHERE TravellerID = @TravellerID";
+                    string query = "UPDATE Traveller SET ApprovedBy = @ManagedByValue WHERE TravellerID = @TravellerID";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@ManagedByValue", Globals.LoggedInUserID);
-                        cmd.Parameters.AddWithValue("@TravellerID", txtUserID);
+                        cmd.Parameters.AddWithValue("@TravellerID",Convert.ToInt32(txtUserID.Text));
 
                         int rowsAffected = cmd.ExecuteNonQuery();
 

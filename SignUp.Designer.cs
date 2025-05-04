@@ -56,7 +56,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblName.ForeColor = System.Drawing.Color.Black;
+            this.lblName.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblName.Location = new System.Drawing.Point(200, 120);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(60, 21);
@@ -75,7 +75,7 @@
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblGender.ForeColor = System.Drawing.Color.Black;
+            this.lblGender.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblGender.Location = new System.Drawing.Point(200, 180);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(70, 21);
@@ -98,7 +98,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEmail.ForeColor = System.Drawing.Color.Black;
+            this.lblEmail.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblEmail.Location = new System.Drawing.Point(200, 240);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(57, 21);
@@ -117,7 +117,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPassword.ForeColor = System.Drawing.Color.Black;
+            this.lblPassword.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblPassword.Location = new System.Drawing.Point(700, 120);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(86, 21);
@@ -137,7 +137,7 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPhone.ForeColor = System.Drawing.Color.Black;
+            this.lblPhone.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblPhone.Location = new System.Drawing.Point(700, 180);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(63, 21);
@@ -156,7 +156,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblAddress.ForeColor = System.Drawing.Color.Black;
+            this.lblAddress.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblAddress.Location = new System.Drawing.Point(700, 240);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(74, 21);
@@ -205,7 +205,7 @@
             // 
             this.lblDOB.AutoSize = true;
             this.lblDOB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDOB.ForeColor = System.Drawing.Color.Black;
+            this.lblDOB.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblDOB.Location = new System.Drawing.Point(200, 300);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(111, 21);
@@ -224,7 +224,7 @@
             // 
             this.lblLanguage.AutoSize = true;
             this.lblLanguage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblLanguage.ForeColor = System.Drawing.Color.Black;
+            this.lblLanguage.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblLanguage.Location = new System.Drawing.Point(700, 300);
             this.lblLanguage.Name = "lblLanguage";
             this.lblLanguage.Size = new System.Drawing.Size(89, 21);
@@ -243,7 +243,7 @@
             // 
             this.lblNationality.AutoSize = true;
             this.lblNationality.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblNationality.ForeColor = System.Drawing.Color.Black;
+            this.lblNationality.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lblNationality.Location = new System.Drawing.Point(200, 360);
             this.lblNationality.Name = "lblNationality";
             this.lblNationality.Size = new System.Drawing.Size(101, 21);

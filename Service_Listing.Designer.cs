@@ -11,9 +11,6 @@ namespace @new
         private Label label2;
         private DataGridView dataGridView1;
         private Button btnAddListing;
-        private DataGridViewTextBoxColumn colServiceName;
-        private DataGridViewTextBoxColumn colLocation;
-        private DataGridViewButtonColumn colEdit;
 
         protected override void Dispose(bool disposing)
         {
@@ -26,14 +23,12 @@ namespace @new
         {
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colServiceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEdit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnAddListing = new System.Windows.Forms.Button();
             this.btn_BookingManagement = new System.Windows.Forms.Button();
             this.btnServiceConfirmation = new System.Windows.Forms.Button();
             this.btnPerformance = new System.Windows.Forms.Button();
             this.btnProfileManagement = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,35 +47,11 @@ namespace @new
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colServiceName,
-            this.colLocation,
-            this.colEdit});
             this.dataGridView1.GridColor = System.Drawing.Color.AliceBlue;
             this.dataGridView1.Location = new System.Drawing.Point(100, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1080, 288);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // colServiceName
-            // 
-            this.colServiceName.HeaderText = "Hotel / Service Name";
-            this.colServiceName.Name = "colServiceName";
-            this.colServiceName.Width = 450;
-            // 
-            // colLocation
-            // 
-            this.colLocation.HeaderText = "Location";
-            this.colLocation.Name = "colLocation";
-            this.colLocation.Width = 350;
-            // 
-            // colEdit
-            // 
-            this.colEdit.HeaderText = "";
-            this.colEdit.Name = "colEdit";
-            this.colEdit.Text = "Edit";
-            this.colEdit.UseColumnTextForButtonValue = true;
-            this.colEdit.Width = 150;
             // 
             // btnAddListing
             // 
@@ -95,6 +66,7 @@ namespace @new
             this.btnAddListing.TabIndex = 2;
             this.btnAddListing.Text = "+ Add Listing";
             this.btnAddListing.UseVisualStyleBackColor = false;
+            this.btnAddListing.Click += new System.EventHandler(this.btnAddListing_Click);
             // 
             // btn_BookingManagement
             // 
@@ -156,12 +128,28 @@ namespace @new
             this.btnProfileManagement.UseVisualStyleBackColor = false;
             this.btnProfileManagement.Click += new System.EventHandler(this.btnProfileManagement_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(304, 418);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 40);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "- Delete Listing";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Service_Listing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnProfileManagement);
             this.Controls.Add(this.btn_BookingManagement);
             this.Controls.Add(this.btnServiceConfirmation);
@@ -180,5 +168,6 @@ namespace @new
         private Button btnServiceConfirmation;
         private Button btnPerformance;
         private Button btnProfileManagement;
+        private Button button1;
     }
 }

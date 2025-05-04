@@ -134,16 +134,22 @@ namespace Db_project
         private void showtravellers_Click(object sender, EventArgs e)
         {
             load_travellers();
+            dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         private void showoperators_Click(object sender, EventArgs e)
         {
             LoadTourOperators();
+            dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         private void showproviders_Click(object sender, EventArgs e)
         {
             LoadServiceProvidersIntoGrid();
+            dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         private void btnApprove_Click(object sender, EventArgs e)
@@ -157,6 +163,7 @@ namespace Db_project
             else if (showing == 3) {
                 UpdateManagedBy_Provider();
             }
+
 
         }
         private void UpdateTravellerManagedBy()

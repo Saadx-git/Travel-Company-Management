@@ -95,6 +95,7 @@ namespace Db_project
             this.dgvPasses.Name = "dgvPasses";
             this.dgvPasses.Size = new System.Drawing.Size(1031, 450);
             this.dgvPasses.TabIndex = 5;
+            this.dgvPasses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             // 
             // btnBack
             // 

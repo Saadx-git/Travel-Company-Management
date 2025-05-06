@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,8 +15,6 @@ namespace Db_project
         public HotelAssignment()
         {
             InitializeComponent();
-            Load_Hotels();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,29 +46,12 @@ namespace Db_project
         {
 
         }
-        private void Load_Hotels() { 
-            string query = "SELECT * FROM Listing";
-            using (SqlConnection conn = new SqlConnection(Globals.connectionString)) {
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dataGridView1.DataSource = dt;
-            }
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-        }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             CreateTrip login = new CreateTrip();
             login.Show();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

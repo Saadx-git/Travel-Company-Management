@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
@@ -94,6 +94,19 @@ namespace Db_project
                 dgv1.DataSource = table;
                 dgv1.Columns["Trip_Price"].HeaderText = "Price";
                 dgv1.Columns["TripID"].Visible = true; // Always show TripID
+            }
+        }
+
+                if (maxBudget > 0)
+                    cmd.Parameters.AddWithValue("@MaxBudget", maxBudget);
+
+                var adapter = new SqlDataAdapter(cmd);
+                var table = new DataTable();
+                adapter.Fill(table);
+
+                dgv1.DataSource = table;
+                dgv1.Columns["TripID"].Visible = false;
+                dgv1.Columns["Trip_Price"].HeaderText = "Price";
             }
         }
 

@@ -17,6 +17,7 @@ namespace Db_project
         {
             InitializeComponent();
             Load_Trip();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -40,9 +41,20 @@ namespace Db_project
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            UpdateTrip login = new UpdateTrip();
-            login.Show();
-            this.Hide();
+            //selected the selected trip id from the datagrid
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedRowIndex = dataGridView1.SelectedRows[0].Index;
+                int tripId = Convert.ToInt32(dataGridView1.Rows[selectedRowIndex].Cells["TripID"].Value);
+                Globals.temporaryint = tripId;
+                this.Hide();
+                UpdateTrip updateTrip = new UpdateTrip();
+                updateTrip.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a trip to update.");
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -63,6 +75,39 @@ namespace Db_project
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
+            }
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //delete from trip table the trip id that is selected
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedRowIndex = dataGridView1.SelectedRows[0].Index;
+                int tripId = Convert.ToInt32(dataGridView1.Rows[selectedRowIndex].Cells["TripID"].Value);
+                string query = "DELETE FROM Trip WHERE TripID = @tripid";
+                using (SqlConnection conn = new SqlConnection(Globals.connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@tripid", tripId);
+                    conn.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Trip deleted successfully.");
+                        Load_Trip();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error deleting trip.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a trip to delete.");
             }
         }
     }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Db_project
 {
@@ -71,6 +72,45 @@ namespace Db_project
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void buttonAssign_Click(object sender, EventArgs e)
+        {
+            
+            if (dataGridView1.SelectedCells.Count <= 0)
+            {
+                MessageBox.Show("Please select a hotel to assign.");
+                return;
+            }
+
+
+            int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
+            int listingID = Convert.ToInt32(selectedRow.Cells["ListingID"].Value);
+            int tourOperatorID = Globals.LoggedInUserID;
+            string status = "Assigned";
+            string query = "INSERT INTO ServiceAssignment (Status, TourOperatorID,ListingID) VALUES (@status, @tourOperatorID, @listingID)";
+            using (SqlConnection conn = new SqlConnection(Globals.connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@status", status);
+                cmd.Parameters.AddWithValue("@tourOperatorID", tourOperatorID);
+                cmd.Parameters.AddWithValue("@listingID", listingID);
+                conn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Hotel Assigned Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Error assigning hotel");
+                }
+            }
+            //Refresh the datagridview
+            Load_Hotels();  
+
 
         }
     }

@@ -44,6 +44,7 @@
             this.buttonAssign.TabIndex = 6;
             this.buttonAssign.Text = "Assign Hotel";
             this.buttonAssign.UseVisualStyleBackColor = false;
+            this.buttonAssign.Click += new System.EventHandler(this.buttonAssign_Click);
             // 
             // btnBack
             // 

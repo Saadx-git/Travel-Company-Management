@@ -4,8 +4,6 @@
     {
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.DataGridView dgvRequests;
 
         protected override void Dispose(bool disposing)
@@ -19,8 +17,6 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.dgvRequests = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,31 +35,13 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Service Assignment";
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblId.Location = new System.Drawing.Point(784, 137);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(31, 21);
-            this.lblId.TabIndex = 3;
-            this.lblId.Text = "ID:";
-            // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtId.Location = new System.Drawing.Point(882, 137);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(200, 27);
-            this.txtId.TabIndex = 4;
-            // 
             // dgvRequests
             // 
             this.dgvRequests.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRequests.Location = new System.Drawing.Point(34, 135);
             this.dgvRequests.Name = "dgvRequests";
-            this.dgvRequests.Size = new System.Drawing.Size(714, 573);
+            this.dgvRequests.Size = new System.Drawing.Size(1053, 573);
             this.dgvRequests.TabIndex = 5;
             // 
             // btnBack
@@ -88,7 +66,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(986, 199);
+            this.button1.Location = new System.Drawing.Point(1118, 209);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 45);
             this.button1.TabIndex = 8;
@@ -102,12 +80,13 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(786, 199);
+            this.button2.Location = new System.Drawing.Point(1118, 135);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 45);
             this.button2.TabIndex = 7;
             this.button2.Text = "Accept";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Service_Integration
             // 
@@ -119,8 +98,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.lblId);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.dgvRequests);
             this.Name = "Service_Integration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

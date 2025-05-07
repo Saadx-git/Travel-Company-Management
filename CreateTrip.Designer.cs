@@ -46,6 +46,12 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.btnProfileManagement = new System.Windows.Forms.Button();
+            this.lblItinerary = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.lblTripPrice = new System.Windows.Forms.Label();
+            this.txtprice = new System.Windows.Forms.TextBox();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +60,7 @@
             this.titlebox.BackColor = System.Drawing.Color.White;
             this.titlebox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.titlebox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.titlebox.Location = new System.Drawing.Point(327, 153);
+            this.titlebox.Location = new System.Drawing.Point(325, 128);
             this.titlebox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.titlebox.Name = "titlebox";
             this.titlebox.Size = new System.Drawing.Size(224, 23);
@@ -65,7 +71,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(496, 56);
+            this.label1.Location = new System.Drawing.Point(492, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(290, 40);
@@ -77,7 +83,7 @@
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.title.ForeColor = System.Drawing.Color.Indigo;
-            this.title.Location = new System.Drawing.Point(199, 153);
+            this.title.Location = new System.Drawing.Point(197, 128);
             this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(38, 19);
@@ -89,7 +95,7 @@
             this.durationbox.BackColor = System.Drawing.Color.White;
             this.durationbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.durationbox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.durationbox.Location = new System.Drawing.Point(827, 153);
+            this.durationbox.Location = new System.Drawing.Point(823, 128);
             this.durationbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.durationbox.Name = "durationbox";
             this.durationbox.Size = new System.Drawing.Size(224, 23);
@@ -100,7 +106,7 @@
             this.duration.AutoSize = true;
             this.duration.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.duration.ForeColor = System.Drawing.Color.Indigo;
-            this.duration.Location = new System.Drawing.Point(685, 153);
+            this.duration.Location = new System.Drawing.Point(681, 128);
             this.duration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.duration.Name = "duration";
             this.duration.Size = new System.Drawing.Size(67, 19);
@@ -109,7 +115,7 @@
             // 
             // startdate
             // 
-            this.startdate.Location = new System.Drawing.Point(327, 229);
+            this.startdate.Location = new System.Drawing.Point(325, 204);
             this.startdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.startdate.Name = "startdate";
             this.startdate.Size = new System.Drawing.Size(249, 24);
@@ -117,7 +123,7 @@
             // 
             // enddate
             // 
-            this.enddate.Location = new System.Drawing.Point(827, 229);
+            this.enddate.Location = new System.Drawing.Point(823, 204);
             this.enddate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.enddate.Name = "enddate";
             this.enddate.Size = new System.Drawing.Size(249, 24);
@@ -128,7 +134,7 @@
             this.start.AutoSize = true;
             this.start.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.start.ForeColor = System.Drawing.Color.Indigo;
-            this.start.Location = new System.Drawing.Point(190, 233);
+            this.start.Location = new System.Drawing.Point(188, 208);
             this.start.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(76, 19);
@@ -140,7 +146,7 @@
             this.end.AutoSize = true;
             this.end.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.end.ForeColor = System.Drawing.Color.Indigo;
-            this.end.Location = new System.Drawing.Point(685, 233);
+            this.end.Location = new System.Drawing.Point(681, 208);
             this.end.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.end.Name = "end";
             this.end.Size = new System.Drawing.Size(68, 19);
@@ -152,7 +158,7 @@
             this.groupsize.BackColor = System.Drawing.Color.White;
             this.groupsize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.groupsize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.groupsize.Location = new System.Drawing.Point(327, 309);
+            this.groupsize.Location = new System.Drawing.Point(325, 284);
             this.groupsize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupsize.Name = "groupsize";
             this.groupsize.Size = new System.Drawing.Size(224, 23);
@@ -163,7 +169,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(190, 312);
+            this.label2.Location = new System.Drawing.Point(188, 287);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 19);
@@ -175,7 +181,7 @@
             this.audience.BackColor = System.Drawing.Color.White;
             this.audience.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.audience.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.audience.Location = new System.Drawing.Point(827, 312);
+            this.audience.Location = new System.Drawing.Point(823, 287);
             this.audience.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.audience.Name = "audience";
             this.audience.Size = new System.Drawing.Size(224, 23);
@@ -186,7 +192,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(685, 312);
+            this.label3.Location = new System.Drawing.Point(681, 287);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 19);
@@ -200,7 +206,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(494, 405);
+            this.button1.Location = new System.Drawing.Point(513, 580);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(262, 62);
@@ -216,7 +222,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(827, 513);
+            this.button2.Location = new System.Drawing.Point(880, 581);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(265, 62);
@@ -232,7 +238,7 @@
             this.btnProfileManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfileManagement.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnProfileManagement.ForeColor = System.Drawing.Color.White;
-            this.btnProfileManagement.Location = new System.Drawing.Point(194, 513);
+            this.btnProfileManagement.Location = new System.Drawing.Point(150, 580);
             this.btnProfileManagement.Name = "btnProfileManagement";
             this.btnProfileManagement.Size = new System.Drawing.Size(272, 62);
             this.btnProfileManagement.TabIndex = 16;
@@ -240,12 +246,84 @@
             this.btnProfileManagement.UseVisualStyleBackColor = false;
             this.btnProfileManagement.Click += new System.EventHandler(this.btnProfileManagement_Click);
             // 
+            // lblItinerary
+            // 
+            this.lblItinerary.AutoSize = true;
+            this.lblItinerary.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblItinerary.ForeColor = System.Drawing.Color.Indigo;
+            this.lblItinerary.Location = new System.Drawing.Point(197, 365);
+            this.lblItinerary.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblItinerary.Name = "lblItinerary";
+            this.lblItinerary.Size = new System.Drawing.Size(67, 19);
+            this.lblItinerary.TabIndex = 17;
+            this.lblItinerary.Text = "Itinerary";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(320, 365);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(229, 96);
+            this.richTextBox1.TabIndex = 18;
+            this.richTextBox1.Text = "";
+            // 
+            // lblTripPrice
+            // 
+            this.lblTripPrice.AutoSize = true;
+            this.lblTripPrice.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTripPrice.ForeColor = System.Drawing.Color.Indigo;
+            this.lblTripPrice.Location = new System.Drawing.Point(681, 361);
+            this.lblTripPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTripPrice.Name = "lblTripPrice";
+            this.lblTripPrice.Size = new System.Drawing.Size(73, 19);
+            this.lblTripPrice.TabIndex = 19;
+            this.lblTripPrice.Text = "Trip Price";
+            // 
+            // txtprice
+            // 
+            this.txtprice.BackColor = System.Drawing.Color.White;
+            this.txtprice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtprice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtprice.Location = new System.Drawing.Point(823, 361);
+            this.txtprice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtprice.Name = "txtprice";
+            this.txtprice.Size = new System.Drawing.Size(224, 23);
+            this.txtprice.TabIndex = 20;
+            // 
+            // lblCategory
+            // 
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCategory.ForeColor = System.Drawing.Color.Indigo;
+            this.lblCategory.Location = new System.Drawing.Point(681, 438);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(72, 19);
+            this.lblCategory.TabIndex = 21;
+            this.lblCategory.Text = "Category";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBox1.Location = new System.Drawing.Point(823, 438);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(224, 23);
+            this.textBox1.TabIndex = 22;
+            // 
             // CreateTrip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblCategory);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblTripPrice);
+            this.Controls.Add(this.txtprice);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.lblItinerary);
             this.Controls.Add(this.btnProfileManagement);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -293,6 +371,12 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnProfileManagement;
+        private System.Windows.Forms.Label lblItinerary;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label lblTripPrice;
+        private System.Windows.Forms.TextBox txtprice;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

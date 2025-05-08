@@ -96,5 +96,60 @@ namespace Db_project
                 MessageBox.Show("Please select a row to update.");
             }
         }
+
+        private void load_listings()
+        {
+            // Pull only those listings for this provider that actually have an assignment
+            string query = @"
+        SELECT 
+            l.ListingID,
+            l.[Listing Name],
+            l.[Listing Description],
+            l.[Listing Price],
+            sa.Status
+        FROM Listing l
+        INNER JOIN ServiceAssignment sa 
+            ON l.ListingID = sa.ListingID
+        WHERE 
+            l.ProviderID = @providerID";
+
+            using (SqlConnection conn = new SqlConnection(Globals.connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@providerID", Globals.LoggedInUserID);
+
+                var adapter = new SqlDataAdapter(cmd);
+                var dt = new DataTable();
+                adapter.Fill(dt);
+
+                // Assuming you’ve placed a DataGridView on your form called dgvListings
+                dgvRequests.DataSource = dt;
+                dgvRequests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Select the entry from the dgvRequests and assign the status to Completed
+            if (dgvRequests.SelectedRows.Count > 0)
+            {
+                int selectedRowIndex = dgvRequests.SelectedRows[0].Index;
+                int assignmentID = (int)dgvRequests.Rows[selectedRowIndex].Cells["AssignmentID"].Value;
+
+                string query = "UPDATE ServiceAssignment SET Status = 'Rejected' WHERE AssignmentID = @assignmentID";
+                using (SqlConnection conn = new SqlConnection(Globals.connectionString))
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@assignmentID", assignmentID);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                load_assignments();
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to update.");
+            }
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace Db_project
         }
         public void InsertTrip()
         {
+            // 1) Gather inputs
             string title = titlebox.Text;
             string itinerary = richTextBox1.Text;
             DateTime startDate = startdate.Value;
@@ -55,54 +56,63 @@ namespace Db_project
             int tripPrice = int.Parse(txtprice.Text);
             string category = textBox1.Text;
             int operatorID = Globals.LoggedInUserID;
+
+            // 2) Lookup CategoryID
             int categoryID = 0;
-            string query = "SELECT CategoryID FROM Category WHERE Name = @category";
-            using (SqlConnection connection = new SqlConnection(Globals.connectionString))
+            const string lookupSql =
+                "SELECT CategoryID FROM Category WHERE Name = @category";
+            using (var conn = new SqlConnection(Globals.connectionString))
+            using (var cmd = new SqlCommand(lookupSql, conn))
             {
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@category", category);
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    categoryID = reader.GetInt32(0);
-                }
-                else
+                cmd.Parameters.AddWithValue("@category", category);
+                conn.Open();
+                object cat = cmd.ExecuteScalar();
+                if (cat == null)
                 {
                     MessageBox.Show("Category not found.");
-                    return;
                 }
-                reader.Close();
+                categoryID = Convert.ToInt32(cat);
             }
-            string insertQuery = "INSERT INTO Trip (OperatorID, Title, Itinerary, StartDate, EndDate, Duration, GroupSize, AudienceType, Trip_Price, CategoryID) " +
-                "VALUES (@OperatorID, @Title, @Itinerary, @StartDate, @EndDate, @Duration, @GroupSize, @AudienceType, @Trip_Price, @CategoryID)";
-            using (SqlConnection connection = new SqlConnection(Globals.connectionString))
-            {
-                SqlCommand command = new SqlCommand(insertQuery, connection);
-                command.Parameters.AddWithValue("@OperatorID", operatorID);
-                command.Parameters.AddWithValue("@Title", title);
-                command.Parameters.AddWithValue("@Itinerary", itinerary);
-                command.Parameters.AddWithValue("@StartDate", startDate);
-                command.Parameters.AddWithValue("@EndDate", endDate);
-                command.Parameters.AddWithValue("@Duration", duration);
-                command.Parameters.AddWithValue("@GroupSize", groupSize);
-                command.Parameters.AddWithValue("@AudienceType", audienceType);
-                command.Parameters.AddWithValue("@Trip_Price", tripPrice);
-                command.Parameters.AddWithValue("@CategoryID", categoryID);
 
-                connection.Open();
-                command.ExecuteNonQuery();
-                if (command.ExecuteNonQuery() == 0)
+            // 3) Insert and OUTPUT the new TripID
+            const string insertSql = @"
+        INSERT INTO Trip
+          (OperatorID, Title, Itinerary, StartDate, EndDate, Duration,
+           GroupSize, AudienceType, Trip_Price, CategoryID)
+        OUTPUT INSERTED.TripID
+        VALUES
+          (@OperatorID, @Title, @Itinerary, @StartDate, @EndDate,
+           @Duration, @GroupSize, @AudienceType, @Trip_Price, @CategoryID)";
+
+            using (var conn = new SqlConnection(Globals.connectionString))
+            using (var cmd = new SqlCommand(insertSql, conn))
+            {
+                cmd.Parameters.AddWithValue("@OperatorID", operatorID);
+                cmd.Parameters.AddWithValue("@Title", title);
+                cmd.Parameters.AddWithValue("@Itinerary", itinerary);
+                cmd.Parameters.AddWithValue("@StartDate", startDate);
+                cmd.Parameters.AddWithValue("@EndDate", endDate);
+                cmd.Parameters.AddWithValue("@Duration", duration);
+                cmd.Parameters.AddWithValue("@GroupSize", groupSize);
+                cmd.Parameters.AddWithValue("@AudienceType", audienceType);
+                cmd.Parameters.AddWithValue("@Trip_Price", tripPrice);
+                cmd.Parameters.AddWithValue("@CategoryID", categoryID);
+
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null && int.TryParse(result.ToString(), out int newTripID))
                 {
-                    MessageBox.Show("Trip creation failed.");
-                    return;
+                    MessageBox.Show($"Trip created successfully. TripID: {newTripID}");
+                    Globals.temporaryint = newTripID;
                 }
                 else
                 {
-                    MessageBox.Show("Trip created successfully.");
+                    MessageBox.Show("Trip creation failed.");
+                   
                 }
             }
         }
+
 
         private void btnProfileManagement_Click(object sender, EventArgs e)
         {

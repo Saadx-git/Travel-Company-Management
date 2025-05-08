@@ -33,6 +33,8 @@ namespace Db_project
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnBook = new System.Windows.Forms.Button();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+
+            
             this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
@@ -245,6 +247,23 @@ namespace Db_project
         private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Button btnBack;
+
+      
+
+        // Selection/detail controls
+        private System.Windows.Forms.TextBox txtSelTitle;
+        private System.Windows.Forms.DateTimePicker dtpSelStartDate;
+        private System.Windows.Forms.TextBox txtSelGroupSize;
+        private System.Windows.Forms.ComboBox cmbSelAudienceType;
+        private System.Windows.Forms.TextBox txtSelPrice;
+        private System.Windows.Forms.TextBox txtSelCity;
+        private System.Windows.Forms.TextBox txtSelCountry;
+
+        // Traveller info controls
+        private System.Windows.Forms.TextBox txtTravellerName;
+        private System.Windows.Forms.DateTimePicker dtpTravellerDOB;
+        private System.Windows.Forms.TextBox txtTravellerNationality;
+        private System.Windows.Forms.TextBox txtTravellerLanguage;
 
     }
 }

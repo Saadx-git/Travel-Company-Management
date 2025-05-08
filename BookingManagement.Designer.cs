@@ -10,10 +10,6 @@ namespace @new
         private System.ComponentModel.IContainer components = null;
         private Label lblTitle;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn colBookingID;
-        private DataGridViewTextBoxColumn colBookingInfo;
-        private DataGridViewTextBoxColumn colDate;
-        private DataGridViewTextBoxColumn colStatus;
 
         private Label lblBookingID;
         private TextBox txtBookingID;
@@ -32,10 +28,6 @@ namespace @new
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colBookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBookingInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBookingID = new System.Windows.Forms.Label();
             this.txtBookingID = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
@@ -70,11 +62,6 @@ namespace @new
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colBookingID,
-            this.colBookingInfo,
-            this.colDate,
-            this.colStatus});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -90,30 +77,6 @@ namespace @new
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(1054, 219);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // colBookingID
-            // 
-            this.colBookingID.HeaderText = "Booking ID";
-            this.colBookingID.Name = "colBookingID";
-            this.colBookingID.Width = 150;
-            // 
-            // colBookingInfo
-            // 
-            this.colBookingInfo.HeaderText = "Booking Info";
-            this.colBookingInfo.Name = "colBookingInfo";
-            this.colBookingInfo.Width = 400;
-            // 
-            // colDate
-            // 
-            this.colDate.HeaderText = "Date";
-            this.colDate.Name = "colDate";
-            this.colDate.Width = 250;
-            // 
-            // colStatus
-            // 
-            this.colStatus.HeaderText = "Status";
-            this.colStatus.Name = "colStatus";
-            this.colStatus.Width = 250;
             // 
             // lblBookingID
             // 

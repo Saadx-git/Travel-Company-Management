@@ -15,60 +15,57 @@ namespace Db_project
 
             btnSearch.Click += btnSearch_Click;
             btnBook.Click += btnBook_Click;
+            btnBack.Click += btnBack_Click;
 
-            LoadTrips(); // load all trips on form start
+            LoadTrips();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var tripDashboardForm = new TripDashboard();
-            tripDashboardForm.Show();
+            new TripDashboard().Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string destination = txtDestination.Text.Trim();
             DateTime minDate = dtpDate.Value.Date;
-            int.TryParse(txtGroupSize.Text.Trim(), out int minGroupSize);
+            int minGroupSize = 0; int.TryParse(txtGroupSize.Text, out minGroupSize);
             string audienceType = cmbActivityType.Text.Trim();
-            int.TryParse(txtPriceRange.Text.Trim(), out int maxBudget);
+            int maxBudget = 0; int.TryParse(txtPriceRange.Text, out maxBudget);
 
             var sb = new StringBuilder();
             sb.Append(@"
-                SELECT 
-                    t.TripID,
-                    t.Title,
-                    t.StartDate,
-                    t.EndDate,
-                    t.Duration,
-                    t.GroupSize,
-                    t.AudienceType,
-                    t.Trip_Price,
-                    d.City,
-                    d.Country,
-                    d.Region
-                FROM Trip AS t
-                JOIN Trip_Offers_Destination AS tod ON tod.TripID = t.TripID
-                JOIN Destination AS d ON d.DestinationID = tod.DestinationID
-                WHERE 1 = 1
-            ");
+SELECT 
+    t.TripID,
+    t.Title,
+    t.StartDate,
+    t.GroupSize,
+    t.AudienceType,
+    t.Trip_Price AS Price,
+    d.City,
+    d.Country
+FROM Trip AS t
+JOIN Trip_Offers_Destination tod ON tod.TripID = t.TripID
+JOIN Destination d             ON d.DestinationID = tod.DestinationID
+WHERE 1=1
+");
 
             if (!string.IsNullOrEmpty(destination))
-                sb.Append(" AND (d.City LIKE @Destination OR d.Country LIKE @Destination OR d.Region LIKE @Destination)\n");
+                sb.Append("  AND (d.City LIKE @Destination OR d.Country LIKE @Destination OR d.Region LIKE @Destination)\r\n");
 
-            sb.Append(" AND t.StartDate >= @MinDate\n");
+            sb.Append("  AND t.StartDate >= @MinDate\r\n");
 
             if (minGroupSize > 0)
-                sb.Append(" AND t.GroupSize >= @MinGroupSize\n");
+                sb.Append("  AND t.GroupSize >= @MinGroupSize\r\n");
 
             if (!string.IsNullOrEmpty(audienceType))
-                sb.Append(" AND t.AudienceType = @AudienceType\n");
+                sb.Append("  AND t.AudienceType = @AudienceType\r\n");
 
             if (maxBudget > 0)
-                sb.Append(" AND t.Trip_Price <= @MaxBudget\n");
+                sb.Append("  AND t.Trip_Price <= @MaxBudget\r\n");
 
-            sb.Append(" ORDER BY t.StartDate;");
+            sb.Append("ORDER BY t.StartDate;");
 
             using (var con = new SqlConnection(Globals.connectionString))
             using (var cmd = new SqlCommand(sb.ToString(), con))
@@ -77,26 +74,10 @@ namespace Db_project
                     cmd.Parameters.AddWithValue("@Destination", "%" + destination + "%");
 
                 cmd.Parameters.Add("@MinDate", SqlDbType.Date).Value = minDate;
-
                 if (minGroupSize > 0)
                     cmd.Parameters.AddWithValue("@MinGroupSize", minGroupSize);
-
                 if (!string.IsNullOrEmpty(audienceType))
                     cmd.Parameters.AddWithValue("@AudienceType", audienceType);
-
-                if (maxBudget > 0)
-                    cmd.Parameters.AddWithValue("@MaxBudget", maxBudget);
-
-                var adapter = new SqlDataAdapter(cmd);
-                var table = new DataTable();
-                adapter.Fill(table);
-
-                dgv1.DataSource = table;
-                dgv1.Columns["Trip_Price"].HeaderText = "Price";
-                dgv1.Columns["TripID"].Visible = true; // Always show TripID
-            }
-        }
-
                 if (maxBudget > 0)
                     cmd.Parameters.AddWithValue("@MaxBudget", maxBudget);
 
@@ -106,48 +87,36 @@ namespace Db_project
 
                 dgv1.DataSource = table;
                 dgv1.Columns["TripID"].Visible = false;
-                dgv1.Columns["Trip_Price"].HeaderText = "Price";
+                dgv1.Columns["Price"].HeaderText = "Price";
             }
         }
 
         private void LoadTrips()
         {
-            string query = @"
-                SELECT 
-                    t.TripID,
-                    t.Title,
-                    t.StartDate,
-                    t.EndDate,
-                    t.Duration,
-                    t.GroupSize,
-                    t.Trip_Price,
-                    d.City,
-                    d.Country,
-                    d.Region
-                FROM Trip AS t
-                JOIN Trip_Offers_Destination AS tod ON tod.TripID = t.TripID
-                JOIN Destination AS d ON d.DestinationID = tod.DestinationID
-                WHERE t.StartDate > GETDATE()
-                ORDER BY t.StartDate;
-            ";
+            const string query = @"
+SELECT 
+    t.TripID,
+    t.Title,
+    t.StartDate,
+    t.GroupSize,
+    t.AudienceType,
+    t.Trip_Price AS Price,
+    d.City,
+    d.Country
+FROM Trip AS t
+JOIN Trip_Offers_Destination tod ON tod.TripID = t.TripID
+JOIN Destination d             ON d.DestinationID = tod.DestinationID
+ORDER BY t.StartDate;";
 
             using (var conn = new SqlConnection(Globals.connectionString))
+            using (var adapter = new SqlDataAdapter(query, conn))
             {
-                try
-                {
-                    conn.Open();
-                    var adapter = new SqlDataAdapter(query, conn);
-                    var dt = new DataTable();
-                    adapter.Fill(dt);
+                var dt = new DataTable();
+                adapter.Fill(dt);
 
-                    dgv1.DataSource = dt;
-                    dgv1.Columns["Trip_Price"].HeaderText = "Price";
-                    dgv1.Columns["TripID"].Visible = true; // Always show TripID
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading trips: " + ex.Message);
-                }
+                dgv1.DataSource = dt;
+                dgv1.Columns["TripID"].Visible = false;
+                dgv1.Columns["Price"].HeaderText = "Price";
             }
         }
 
@@ -160,12 +129,11 @@ namespace Db_project
             }
 
             int tripId = (int)dgv1.SelectedRows[0].Cells["TripID"].Value;
-            decimal fee = Convert.ToDecimal(dgv1.SelectedRows[0].Cells["Trip_Price"].Value);
+            decimal fee = Convert.ToDecimal(dgv1.SelectedRows[0].Cells["Price"].Value);
 
             int travellerId = Globals.LoggedInUserID;
-
             using (var checkCon = new SqlConnection(Globals.connectionString))
-            using (var checkCmd = new SqlCommand("SELECT COUNT(1) FROM Traveller WHERE TravellerID = @T", checkCon))
+            using (var checkCmd = new SqlCommand("SELECT COUNT(1) FROM Traveller WHERE TravellerID=@T", checkCon))
             {
                 checkCmd.Parameters.AddWithValue("@T", travellerId);
                 checkCon.Open();
@@ -181,19 +149,22 @@ namespace Db_project
                 con.Open();
                 using (var tx = con.BeginTransaction())
                 {
-                    var bookingCmd = new SqlCommand(@"
-                        INSERT INTO Booking ([Date], Amount, Status, TravellerID, TripID)
-                        VALUES (GETDATE(), @Amount, 'Completed', @TravellerID, @TripID);
-                        SELECT CAST(SCOPE_IDENTITY() AS INT);", con, tx);
-                    bookingCmd.Parameters.AddWithValue("@Amount", fee);
-                    bookingCmd.Parameters.AddWithValue("@TravellerID", travellerId);
-                    bookingCmd.Parameters.AddWithValue("@TripID", tripId);
+                    var bookCmd = new SqlCommand(@"
+INSERT INTO Booking ([Date], Amount, Status, TravellerID, TripID)
+VALUES (GETDATE(), @Amount, 'Completed', @TravellerID, @TripID);
+SELECT CAST(SCOPE_IDENTITY() AS INT);", con, tx);
+                    bookCmd.Parameters.AddWithValue("@Amount", fee);
+                    bookCmd.Parameters.AddWithValue("@TravellerID", travellerId);
+                    bookCmd.Parameters.AddWithValue("@TripID", tripId);
 
-                    int bookingId = (int)bookingCmd.ExecuteScalar();
+                    int bookingId = (int)bookCmd.ExecuteScalar();
 
                     var passCmd = new SqlCommand(@"
-                        INSERT INTO DigitalPass (PassType, PassDetails, IssueDate, BookingID)
-                        VALUES (@PassType, @PassDetails, GETDATE(), @BookingID);", con, tx);
+INSERT INTO DigitalPass (PassType, PassDetails, IssueDate, BookingID)
+VALUES (@PassType, @PassDetails, GETDATE(), @BookingID);", con, tx);
+                    string s1 = "E-Ticket";
+                    string s2 = "Activity Pass";
+                    string s3 = "Hotel Voucher";
                     passCmd.Parameters.AddWithValue("@PassType", "E-Ticket");
                     passCmd.Parameters.AddWithValue("@PassDetails", $"Booked for Trip #{tripId}");
                     passCmd.Parameters.AddWithValue("@BookingID", bookingId);
@@ -204,7 +175,26 @@ namespace Db_project
             }
 
             MessageBox.Show($"Trip #{tripId} booked under TravellerID {travellerId}.\nDigital pass issued!");
-            LoadTrips(); // Refresh available trips
+            LoadTrips();
+        }
+
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            var row = dgv1.Rows[e.RowIndex];
+            txtSelTitle.Text = row.Cells["Title"].Value.ToString();
+            dtpSelStartDate.Value = (DateTime)row.Cells["StartDate"].Value;
+            txtSelGroupSize.Text = row.Cells["GroupSize"].Value.ToString();
+            cmbSelAudienceType.Text = row.Cells["AudienceType"].Value.ToString();
+            txtSelPrice.Text = row.Cells["Price"].Value.ToString();
+            txtSelCity.Text = row.Cells["City"].Value.ToString();
+            txtSelCountry.Text = row.Cells["Country"].Value.ToString();
+
+            txtTravellerName.Clear();
+            dtpTravellerDOB.Value = DateTime.Today;
+            txtTravellerNationality.Clear();
+            txtTravellerLanguage.Clear();
         }
     }
 }

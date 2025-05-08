@@ -90,13 +90,14 @@ namespace Db_project
             int listingID = Convert.ToInt32(selectedRow.Cells["ListingID"].Value);
             int tourOperatorID = Globals.LoggedInUserID;
             string status = "Assigned";
-            string query = "INSERT INTO ServiceAssignment (Status, TourOperatorID,ListingID) VALUES (@status, @tourOperatorID, @listingID)";
+            string query = "INSERT INTO ServiceAssignment (Status, TourOperatorID,ListingID,TripID) VALUES (@status, @tourOperatorID, @listingID,@TripID)";
             using (SqlConnection conn = new SqlConnection(Globals.connectionString))
             {
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@status", status);
                 cmd.Parameters.AddWithValue("@tourOperatorID", tourOperatorID);
                 cmd.Parameters.AddWithValue("@listingID", listingID);
+                cmd.Parameters.AddWithValue("@TripID", Globals.temporaryint);
                 conn.Open();
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)

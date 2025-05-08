@@ -150,23 +150,32 @@ ORDER BY t.StartDate;";
                 using (var tx = con.BeginTransaction())
                 {
                     var bookCmd = new SqlCommand(@"
-INSERT INTO Booking ([Date], Amount, Status, TravellerID, TripID)
-VALUES (GETDATE(), @Amount, 'Completed', @TravellerID, @TripID);
-SELECT CAST(SCOPE_IDENTITY() AS INT);", con, tx);
+                INSERT INTO Booking ([Date], Amount, Status, TravellerID, TripID)
+                VALUES (GETDATE(), @Amount, 'Completed', @TravellerID, @TripID);
+                SELECT CAST(SCOPE_IDENTITY() AS INT);", con, tx);
                     bookCmd.Parameters.AddWithValue("@Amount", fee);
                     bookCmd.Parameters.AddWithValue("@TravellerID", travellerId);
                     bookCmd.Parameters.AddWithValue("@TripID", tripId);
 
                     int bookingId = (int)bookCmd.ExecuteScalar();
 
+                    Random rand = new Random();
+                    string[] passTypes = { "E-Ticket", "Activity Pass", "Hotel Voucher" };
+                    string selectedPassType = passTypes[rand.Next(passTypes.Length)];
+
+                    string[] passDetailsOptions =
+                    {
+                $"Booked for Trip #{tripId}",
+                $"Includes accommodation for Trip #{tripId}",
+                $"Activity access for Trip #{tripId}"
+            };
+                    string selectedPassDetails = passDetailsOptions[rand.Next(passDetailsOptions.Length)];
+
                     var passCmd = new SqlCommand(@"
-INSERT INTO DigitalPass (PassType, PassDetails, IssueDate, BookingID)
-VALUES (@PassType, @PassDetails, GETDATE(), @BookingID);", con, tx);
-                    string s1 = "E-Ticket";
-                    string s2 = "Activity Pass";
-                    string s3 = "Hotel Voucher";
-                    passCmd.Parameters.AddWithValue("@PassType", "E-Ticket");
-                    passCmd.Parameters.AddWithValue("@PassDetails", $"Booked for Trip #{tripId}");
+                INSERT INTO DigitalPass (PassType, PassDetails, IssueDate, BookingID)
+                VALUES (@PassType, @PassDetails, GETDATE(), @BookingID);", con, tx);
+                    passCmd.Parameters.AddWithValue("@PassType", selectedPassType);
+                    passCmd.Parameters.AddWithValue("@PassDetails", selectedPassDetails);
                     passCmd.Parameters.AddWithValue("@BookingID", bookingId);
                     passCmd.ExecuteNonQuery();
 
@@ -177,6 +186,7 @@ VALUES (@PassType, @PassDetails, GETDATE(), @BookingID);", con, tx);
             MessageBox.Show($"Trip #{tripId} booked under TravellerID {travellerId}.\nDigital pass issued!");
             LoadTrips();
         }
+
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -195,6 +205,11 @@ VALUES (@PassType, @PassDetails, GETDATE(), @BookingID);", con, tx);
             dtpTravellerDOB.Value = DateTime.Today;
             txtTravellerNationality.Clear();
             txtTravellerLanguage.Clear();
+        }
+
+        private void SearchnBooking_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

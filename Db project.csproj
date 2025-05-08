@@ -65,6 +65,12 @@
     <Compile Include="CreateTrip.Designer.cs">
       <DependentUpon>CreateTrip.cs</DependentUpon>
     </Compile>
+    <Compile Include="DestinationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DestinationInfo.Designer.cs">
+      <DependentUpon>DestinationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="DigitalTravelPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,11 @@
     </Compile>
     <Compile Include="PerformanceAnalyticsForm.Designer.cs">
       <DependentUpon>PerformanceAnalyticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Provider_Registration.cs">
       <SubType>Form</SubType>
@@ -203,6 +214,9 @@
     <EmbeddedResource Include="CreateTrip.resx">
       <DependentUpon>CreateTrip.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DestinationInfo.resx">
+      <DependentUpon>DestinationInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DigitalTravelPass.resx">
       <DependentUpon>DigitalTravelPass.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +289,17 @@
     <EmbeddedResource Include="UpdateTrip.resx">
       <DependentUpon>UpdateTrip.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ProjectDataSet.xsc">
+      <DependentUpon>ProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDataSet.xss">
+      <DependentUpon>ProjectDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

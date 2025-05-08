@@ -52,6 +52,8 @@
             this.txtprice = new System.Windows.Forms.TextBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbldestination = new System.Windows.Forms.Label();
+            this.txtdestination = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -271,7 +273,7 @@
             this.lblTripPrice.AutoSize = true;
             this.lblTripPrice.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblTripPrice.ForeColor = System.Drawing.Color.Indigo;
-            this.lblTripPrice.Location = new System.Drawing.Point(681, 361);
+            this.lblTripPrice.Location = new System.Drawing.Point(681, 349);
             this.lblTripPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTripPrice.Name = "lblTripPrice";
             this.lblTripPrice.Size = new System.Drawing.Size(73, 19);
@@ -283,7 +285,7 @@
             this.txtprice.BackColor = System.Drawing.Color.White;
             this.txtprice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtprice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtprice.Location = new System.Drawing.Point(823, 361);
+            this.txtprice.Location = new System.Drawing.Point(823, 349);
             this.txtprice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtprice.Name = "txtprice";
             this.txtprice.Size = new System.Drawing.Size(224, 23);
@@ -294,7 +296,7 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblCategory.ForeColor = System.Drawing.Color.Indigo;
-            this.lblCategory.Location = new System.Drawing.Point(681, 438);
+            this.lblCategory.Location = new System.Drawing.Point(681, 411);
             this.lblCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(72, 19);
@@ -306,11 +308,34 @@
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox1.Location = new System.Drawing.Point(823, 438);
+            this.textBox1.Location = new System.Drawing.Point(823, 411);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 23);
             this.textBox1.TabIndex = 22;
+            // 
+            // lbldestination
+            // 
+            this.lbldestination.AutoSize = true;
+            this.lbldestination.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lbldestination.ForeColor = System.Drawing.Color.Indigo;
+            this.lbldestination.Location = new System.Drawing.Point(681, 476);
+            this.lbldestination.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldestination.Name = "lbldestination";
+            this.lbldestination.Size = new System.Drawing.Size(84, 19);
+            this.lbldestination.TabIndex = 23;
+            this.lbldestination.Text = "Destination";
+            // 
+            // txtdestination
+            // 
+            this.txtdestination.BackColor = System.Drawing.Color.White;
+            this.txtdestination.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtdestination.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtdestination.Location = new System.Drawing.Point(823, 476);
+            this.txtdestination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtdestination.Name = "txtdestination";
+            this.txtdestination.Size = new System.Drawing.Size(224, 23);
+            this.txtdestination.TabIndex = 24;
             // 
             // CreateTrip
             // 
@@ -318,6 +343,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lbldestination);
+            this.Controls.Add(this.txtdestination);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblTripPrice);
@@ -377,6 +404,8 @@
         private System.Windows.Forms.TextBox txtprice;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbldestination;
+        private System.Windows.Forms.TextBox txtdestination;
     }
 }
 

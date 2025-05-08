@@ -39,8 +39,8 @@ namespace Db_project
         private void button1_Click(object sender, EventArgs e)
         {
             InsertTrip();
-            HotelAssignment hotel = new HotelAssignment();
-            hotel.Show();
+            DestinationInfo destinationInfo = new DestinationInfo();
+            destinationInfo.Show();
             this.Hide();
         }
         public void InsertTrip()
@@ -110,6 +110,8 @@ namespace Db_project
                     MessageBox.Show("Trip creation failed.");
                    
                 }
+               
+
             }
         }
 
